@@ -31,10 +31,18 @@
                   <li><strong>Software verification & validation</strong>.</li>
                   <li><strong>Full-stack web development</strong> for business process and document management</li>
               </ul>
-              Projects:
+              Work projects:
               <ul class="list-disc pl-5 space-y-1">
-                  <li><strong><a href="https://www.niering.it/software-gestionali-hr-le-nuove-funzionalita-di-matriskills/" class="anchor">MatriSkillS</a></strong> </li>
-                  <li><strong><a href="https://www.niering.it/case_histories/simulatore-multiprotocollo-emuxp/" class="anchor">EmuXP</a></strong> </li>
+                  <li><strong><a href="https://www.niering.it/software-gestionali-hr-le-nuove-funzionalita-di-matriskills/" class="anchor">MatriSkillS</a></strong> 
+                    <p><strong>Role:</strong> Fullstack Developer</p>
+                    <p>Software platform for personnel management and professional growth, including candidate selection and skill search.</p>
+                    <p><strong>Technologies:</strong> Docker, Flask, MongoDB, Vue.js, Bootstrap</p>
+                  </li>
+                  <li><strong><a href="https://www.niering.it/case_histories/simulatore-multiprotocollo-emuxp/" class="anchor">EmuXP</a></strong> 
+                    <p><strong>Role:</strong> Fullstack Developer</p>
+                    <p>Multiprotocol simulation suite for functional validation of communication nodes, with advanced tools for protocol manipulation.</p>
+                    <p><strong>Technologies:</strong> C, Cython, gRPC, Flask, Vue.js, Vuetify</p>
+                  </li>
               </ul>
         </div>
       </div>
