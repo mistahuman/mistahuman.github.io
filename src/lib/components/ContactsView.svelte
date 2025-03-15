@@ -10,7 +10,6 @@
     <ul class="space-y-2">
         <li>
             <a href="mailto:marco.lanconelli@outlook.it" target="_blank" type="button" class="btn preset-outlined-primary-500">
-                <!-- <Mail size={20} /> -->
                 <span>
                     marco.lanconelli@outlook.it
                 </span>
@@ -21,7 +20,6 @@
         </li>
         <li>
             <a href="https://github.com/mistahuman" target="_blank" type="button" class="btn preset-outlined-primary-500">
-                <!-- <Linkedin size={20} /> -->
                 <span>
                     mistahuman
                 </span>
@@ -32,7 +30,6 @@
         </li>
         <li>
             <a href="https://linkedin.com/in/marco-lanconelli" target="_blank" type="button" class="btn preset-outlined-primary-500">
-                <!-- <Linkedin size={20} /> -->
                 <span>
                     marco-lanconelli
                 </span>
@@ -43,7 +40,6 @@
         </li>
         <li>
             <a href="https://www.instagram.com/lancomarco" target="_blank" type="button" class="btn preset-outlined-primary-500">
-                <!-- <Linkedin size={20} /> -->
                 <span>
                     lancomarco
                 </span>

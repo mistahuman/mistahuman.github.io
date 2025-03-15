@@ -4,7 +4,7 @@
     import Wrench from '@lucide/svelte/icons/wrench';
     import HeartPulse from '@lucide/svelte/icons/heart-pulse';
   
-    let value = $state(['']);
+    let value = $state(['tech']);
   </script>
   
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
@@ -57,14 +57,14 @@
             <li>
                 <span class="badge preset-filled-warning-500">Effective Communication</span>
                 <span class="badge preset-filled-warning-500">Independence & Self-Management</span>
-                <span class="badge preset-filled-warning-500">Time Management</span>
-                <span class="badge preset-filled-warning-500">Giving & Receiving Feedback</span>
+                <!-- <span class="badge preset-filled-warning-500">Time Management</span> -->
+                <!-- <span class="badge preset-filled-warning-500">Giving & Receiving Feedback</span> -->
             </li>
             <li>
                 <span class="badge preset-filled-error-500">Research & Self-Teaching</span>
                 <span class="badge preset-filled-error-500">Critical Thinking</span>
                 <span class="badge preset-filled-error-500">Proactiveness</span>
-                <span class="badge preset-filled-error-500">Curiosity & Willingness to Learn </span>
+                <!-- <span class="badge preset-filled-error-500">Curiosity & Willingness to Learn </span> -->
             </li>
         </ul>
       </div>

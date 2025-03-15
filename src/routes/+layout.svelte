@@ -11,7 +11,7 @@
 		CircleUser,
 	} from "@lucide/svelte";
 	import CircleAlert from "@lucide/svelte/icons/circle-alert";
-	import ThemeSwitch from "$lib/components/ThemeSwitch.svelte";
+	import LightSwitch from "$lib/components/LightSwitch.svelte";
 	import FooterBar from "$lib/components/FooterBar.svelte";
 </script>
 
@@ -35,7 +35,7 @@
 				<!-- Middle -->
 			</div>
 			<div class="flex justify-end items-stretch gap-2">
-				<ThemeSwitch />
+				<LightSwitch />
 				<!--Right  -->
 			</div>
 		</div>

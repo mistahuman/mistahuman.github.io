@@ -6,7 +6,7 @@
     import MapPin from '@lucide/svelte/icons/map-pin';
     import Goal from '@lucide/svelte/icons/goal';
 
-    let value = $state(['']);
+    let value = $state(['nier']);
   </script>
   
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>

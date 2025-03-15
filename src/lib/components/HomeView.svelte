@@ -9,6 +9,9 @@
     <div class="space-y-4 p-4 flex flex-col items-center text-center">
         <h1 class="text-6xl font-bold">mistahuman GitHub Pages</h1>
         <div class="p-4">
+            <p>About me ... (wip)</p>
+        </div>
+        <div class="p-4">
             <a href="#mycv" type="button" class="btn preset-tonal-secondary">
                 <span>
                     Get mycv
@@ -17,7 +20,7 @@
                     <ChevronRight size={20} />
                 </span>
             </a>
-            <a href="#mycv" type="button" class="btn preset-outlined-secondary-500 ml-2">
+            <a href="#contacts" type="button" class="btn preset-outlined-secondary-500 ml-2">
                 <span>
                     Contact me
                 </span>

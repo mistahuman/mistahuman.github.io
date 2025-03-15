@@ -9,7 +9,7 @@
     import Goal from '@lucide/svelte/icons/goal';
   
   
-    let value = $state(['']);
+    let value = $state(['master']);
   </script>
   
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
