@@ -3,7 +3,7 @@
     import AccordionEducation from "./AccordionEducation.svelte";
     import AccordionWork from "./AccordionWork.svelte";
 
-    let group = $state("plane");
+    let group = $state("education");
     const lorem =
         "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam reprehenderit eum, reiciendis obcaecati, excepturi nemo ipsa fugit suscipit autem vitae numquam et cumque praesentium vero eos minus itaque. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam reprehenderit eum, reiciendis obcaecati, excepturi nemo.";
 </script>
