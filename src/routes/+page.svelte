@@ -12,12 +12,10 @@
 </section>
 <hr class="hr" />
 <section
-id="mycv"
-class="min-h-screen flex flex-col items-center justify-center px-6"
+    id="mycv"
+    class="min-h-screen flex flex-col items-center justify-center px-6"
 >
-<div class="container mx-auto flex justify-center p-10 pt-20 pb-5">
     <ProfileView />
-</div>
 </section>
 <hr class="hr" />
 <section

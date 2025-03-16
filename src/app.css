@@ -1,16 +1,15 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
 
-@import '@skeletonlabs/skeleton';
-@import '@skeletonlabs/skeleton/optional/presets';
-@import '@skeletonlabs/skeleton/themes/terminus';
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton/optional/presets";
+@import "@skeletonlabs/skeleton/themes/terminus";
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 /* Set Selector dark mode strategy */
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
-  
