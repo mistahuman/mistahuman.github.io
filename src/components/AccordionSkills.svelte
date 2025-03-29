@@ -4,7 +4,7 @@
     import Wrench from '@lucide/svelte/icons/wrench';
     import HeartPulse from '@lucide/svelte/icons/heart-pulse';
   
-    let value = $state(['tech']);
+    let value = $state(['']);
   </script>
   
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
@@ -16,7 +16,7 @@
         <p class="text-sm">
             I have experience with a wide range of technologies, from web development to embedded systems. I am always eager to learn new tools and languages, and I am not afraid to dive into the unknown.
         </p>
-        <ul class="list-disc list-inside mt-2 space-y-2">
+        <ul class="list list-inside mt-2 space-y-2">
             <li>
                 <span class="badge preset-filled-primary-500">SvelteKit</span>
                 <span class="badge preset-filled-primary-500">Skeleton UI Toolkit</span>

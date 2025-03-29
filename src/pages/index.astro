@@ -1,0 +1,45 @@
+---
+// Component Imports
+import HomeHero from "../components/HomeHero.astro";
+import ContactsView from "../components/ContactsView.astro";
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import LayoutRoot from "../layouts/LayoutRoot.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Aboutme from "../components/Aboutme.astro";
+import Card from "../components/Card.astro";
+---
+
+<LayoutRoot>
+	<Header />
+	<main class="bg-surface-50-950">
+		<!-- Gradient 1 -->
+		<!-- <div class="bg-radial-[at_50%_75%] from-sky-200 via-blue-400/10 to-indigo-900 to-90%"> -->
+		<div class="gradient-homepage-one">
+			<section class="">
+				<div
+					class="container mx-auto flex justify-center p-10 pt-20 pb-5"
+				>
+					<HomeHero />
+					<!-- <Logo></Logo> -->
+					<!-- <Welcome></Welcome> -->
+				</div>
+			</section>
+		</div>
+		<div class="gradient-homepage-two">
+			<section class="">
+				<div
+					class="container mx-auto flex justify-center p-10 pt-20 pb-5"
+				>
+					<ContactsView />
+					<!-- <Logo></Logo> -->
+					<!-- <Welcome></Welcome> -->
+				</div>
+			</section>
+		</div>
+	</main>
+
+	<!-- Footer -->
+	<Footer />
+</LayoutRoot>

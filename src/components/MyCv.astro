@@ -1,0 +1,27 @@
+---
+import AccordionEducation from "../components/AccordionEducation.svelte"
+import AccordionWork from "../components/AccordionWork.svelte"
+import AccordionSkills from "../components/AccordionSkills.svelte"
+import MyHero from "../components/MyHero.astro"
+import Aboutme from "./Aboutme.astro"
+import Card from "./Card.astro"
+---
+
+<div class="p-4 justify-items-center">
+    <MyHero></MyHero>
+</div>
+<div class="p-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2 justify-items-center">    
+    <Card title="About me">
+        <Aboutme />
+    </Card>
+    <Card title="Education">
+        <AccordionEducation client:load="svelte"></AccordionEducation>
+    </Card>
+    <Card title="Work">
+        <AccordionWork client:load="svelte"></AccordionWork>
+    </Card>
+    <Card title="Skills">
+        <AccordionSkills client:load="svelte"></AccordionSkills>
+    </Card>
+
+</div>

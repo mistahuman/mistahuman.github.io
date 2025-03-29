@@ -6,7 +6,7 @@
     import AccordionWork from "./AccordionWork.svelte";
     import AccordionSkills from "./AccordionSkills.svelte";
 
-    let group = $state("aboutme");
+    let group = $state("education");
 </script>
 
 <div
@@ -45,22 +45,11 @@
         <div class="space-y-4 p-4 items-center">
             <Tabs value={group} onValueChange={(e) => (group = e.value)}>
                 {#snippet list()}
-                    <Tabs.Control value="aboutme">About me</Tabs.Control>
                     <Tabs.Control value="education">Education</Tabs.Control>
                     <Tabs.Control value="workexp">Work Experience</Tabs.Control>
                     <Tabs.Control value="skills">Skills</Tabs.Control>
                 {/snippet}
                 {#snippet content()}
-                    <Tabs.Panel value="aboutme">
-                        <p class="p-4">
-                            I am a software engineer and fullstack developer
-                            with a passion for web technologies and software
-                            development. I have a strong background in computer
-                            science and I am always looking for new challenges
-                            and opportunities to grow.
-                        </p>
-                        <p class="p-4">Work in progress ...</p>
-                    </Tabs.Panel>
                     <Tabs.Panel value="education">
                         <AccordionEducation></AccordionEducation>
                     </Tabs.Panel>
