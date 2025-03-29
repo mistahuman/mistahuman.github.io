@@ -1,4 +1,4 @@
-# template-astro-skeleton-svelte
+# mistahuman's Github Pages
 ## Astro Starter Kit: Basics
 
 ```sh

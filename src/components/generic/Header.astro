@@ -1,8 +1,8 @@
 ---
 // Components
-import Drawer from './Drawer.astro';
-import Logo from './Logo.astro';
-import Lightswitch from './Lightswitch.astro';
+import Drawer from '@components/generic/Drawer.astro';
+import Logo from '@components/generic/Logo.astro';
+import Lightswitch from '@components/generic/Lightswitch.astro';
 // Icons
 import { Linkedin, Github, Instagram, Mail } from "@lucide/svelte";
 
@@ -27,7 +27,7 @@ const coreLinks = [
 				<!-- <Navigation /> -->
 			</Drawer>
 			<!-- Logo -->
-			<a class="hidden xl:inline-block" href="/" title="Skeleton">
+			<a class="hidden xl:inline-block" href="/" title="Mistahuman">
                 <Logo width="32" height="32"></Logo>
 			</a>
 			<div class="hidden xl:flex items-center">
