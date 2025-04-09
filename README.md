@@ -1,27 +1,23 @@
 # mistahuman's Github Pages
-## Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
+A responsive github page built with [Astro](https://astro.build/) and [Skeleton](https://www.skeleton.dev/), a modern UI toolkit powered by Tailwind CSS.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## 🚀 Live Demo
 
-## 🧞 Commands
+[View the website](https://mistahuman.github.io/)
 
-All commands are run from the root of the project, from a terminal:
+## 🧰 Tech Stack
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- **Astro** – Static site builder
+- **Skeleton** – UI components and utilities based on Tailwind CSS
+- **Tailwind CSS** – Utility-first CSS framework
 
-## 👀 Want to learn more?
+## 📦 Installation
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To run the project locally:
+
+```bash
+git clone https://github.com/mistahuman/mistahuman.github.io.git
+cd mistahuman.github.io
+npm install
+npm run dev
