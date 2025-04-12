@@ -6,9 +6,11 @@ import Footer from "@components/generic/Footer.astro";
 ---
 
 <LayoutRoot>
-	<Header></Header>
-	<main class="bg-surface-50-950">
-		<slot></slot>
-	</main>
-	<Footer />
+	<div class="grid h-screen grid-rows-[auto_1fr_auto] max-w-full">
+		<Header></Header>
+		<main class="bg-surface-50-950">
+			<slot></slot>
+		</main>
+		<Footer />
+	</div>
 </LayoutRoot>

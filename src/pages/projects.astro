@@ -1,9 +1,15 @@
 ---
-import Layout from "@layouts/Layout.astro"
+import Layout from "@layouts/Layout.astro";
+import ProjectsView from "@components/ProjectsView.astro";
 ---
 
 <Layout>
-    <div class="container mx-auto p-4 flex justify-center items-center">
-        Work in progress
-    </div>
+    <section id="home" class="flex flex-col items-center justify-center px-6">
+        <!-- <HomeView /> -->
+        <div
+            class="container mx-auto flex justify-center px-4 sm:px-6 lg:px-10 pt-10 pb-5"
+        >
+            <ProjectsView />
+        </div>
+    </section>
 </Layout>
