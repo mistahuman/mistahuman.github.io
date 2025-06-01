@@ -27,10 +27,13 @@
 @import '@skeletonlabs/skeleton/themes/vox';
 @import '@skeletonlabs/skeleton/themes/wintry';
 
+@import './mistahuman-theme.css';
+
 @source '../../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
 /* Set Selector dark mode strategy */
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
 
 /* Global Styles */
 
@@ -66,6 +69,7 @@ html {
 
 /* Inner Page Gradient */
 
+[data-theme='mistahuman-theme'],
 [data-theme='concord'],
 [data-theme='reign'],
 [data-theme='terminus'],
