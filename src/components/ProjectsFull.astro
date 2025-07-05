@@ -1,0 +1,113 @@
+---
+// ProjectsFull.astro
+import { ExternalLink, Github, Calendar, Code, Eye } from "@lucide/svelte";
+
+type ProjectStatus = 'completed' | 'inProgress' | 'planned';
+
+type Project = {
+  title: string;
+  description: string;
+  liveUrl: string;
+  githubUrl: string;
+  tech: string[];
+  date: string;
+  status: ProjectStatus;
+  featured: boolean;
+};
+
+const allProjects: Project[] = [
+  {
+    title: "Landing page - Andrea Faccani",
+    description: "modern landing page with a clean design",
+    liveUrl: "https://mistahuman.github.io/landpage-andreafaccani/",
+    githubUrl: "https://github.com/mistahuman/landpage-andreafaccani",
+    tech: ["Astro", "Svelte", "Skeleton UI"],
+    date: "2025",
+    status: "completed",
+    featured: true
+  },
+  {
+    title: "Portfolio - Davide Sigillo",
+    description: "personal portfolio with a minimalist design",
+    liveUrl: "https://mistahuman.github.io/portfolio-davidesigillo/",
+    githubUrl: "https://github.com/mistahuman/portfolio-davidesigillo",
+    tech: ["Astro", "TailwindCSS"],
+    date: "2025",
+    status: "completed",
+    featured: true
+  },
+  // Aggiungi altri progetti qui
+];
+const statusClasses: Record<ProjectStatus, string> = {
+  completed: "preset-filled-success-500",
+  inProgress: "preset-filled-warning-500",
+  planned: "preset-filled-surface-500"
+};
+---
+
+<div class="container mx-auto space-y-8">
+  <header class="text-center space-y-4">
+    <h1 class="h1">Projects</h1>
+    <p class="text-surface-600 dark:text-surface-400">a collection of my recent works</p>
+  </header>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+    {allProjects.map(project => (
+      <article class="card preset-filled-surface-100-900 border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w divide-y overflow-hidden">
+         <div class="relative h-48 bg-surface-200 dark:bg-surface-800 overflow-hidden">
+          <iframe
+            src={project.liveUrl}
+            class="w-full h-full scale-[0.25] origin-top-left"
+            style="width: 400%; height: 400%; pointer-events: none;"
+            loading="lazy"
+            title={`Preview di ${project.title}`}
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-900/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+        </div>
+
+        <div class="p-6 space-y-4">
+          <header class="space-y-2">
+            <div class="flex items-start justify-between">
+              <h3 class="h3">{project.title}</h3>
+              {project.featured && (
+                <span class="badge preset-filled-warning-500">featured</span>
+              )}
+            </div>
+            <p class="text-surface-600 dark:text-surface-400">{project.description}</p>
+          </header>
+
+          <div class="flex flex-wrap gap-2">
+            {project.tech.map(tech => (
+              <span class="chip preset-outlined-primary-500 text-xs flex items-center gap-1">
+                <Code class="w-3 h-3" /><span>{tech}</span>
+              </span>
+            ))}
+          </div>
+
+          <footer class="flex items-center justify-between pt-4 border-t border-surface-300 dark:border-surface-700">
+            <div class="flex items-center gap-2 text-sm text-surface-600 dark:text-surface-400">
+              <Calendar class="w-4 h-4" />
+              <span>{project.date}</span>
+              <span class={`chip ${statusClasses[project.status]} text-xs ml-2`}>
+                {project.status === 'completed'
+                  ? 'completed'
+                  : project.status === 'inProgress'
+                  ? 'in progress'
+                  : 'planned'}
+              </span>
+            </div>
+
+            <div class="flex gap-2">
+              <a href={project.liveUrl} target="_blank" class="btn btn-sm preset-filled-primary-500" aria-label="Vedi demo live">
+                <Eye class="w-4 h-4"/>
+              </a>
+              <a href={project.githubUrl} target="_blank" class="btn btn-sm preset-outlined-primary-500" aria-label="Vedi su GitHub">
+                <Github class="w-4 h-4"/>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </article>
+    ))}
+  </div>
+</div>

@@ -13,7 +13,7 @@
     "@lucide/svelte": "^0.483.0",
     "@skeletonlabs/skeleton-svelte": "^1.0.0",
     "@tailwindcss/vite": "^4.0.14",
-    "astro": "^5.8.1",
+    "astro": "^5.11.0",
     "svelte": "^5.23.2",
     "tailwindcss": "^4.0.14"
   },
