@@ -4,7 +4,7 @@
     import Wrench from '@lucide/svelte/icons/wrench';
     import HeartPulse from '@lucide/svelte/icons/heart-pulse';
   
-    let value = $state(['']);
+    let value = $state(['tech']);
   </script>
   
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
@@ -31,9 +31,12 @@
             <li>
                 <span class="badge preset-filled-tertiary-500">MongoDB</span>
                 <span class="badge preset-filled-tertiary-500">Docker</span>
+                <span class="badge preset-filled-tertiary-500">Kubernetes</span>
                 <span class="badge preset-filled-tertiary-500">CI/CD</span>
                 <span class="badge preset-filled-tertiary-500">Linux</span>
-                <span class="badge preset-filled-tertiary-500">LaTeX</span>
+            </li>
+            <li>
+                <span class="badge preset-filled-success-500">LaTeX</span>
             </li>
         </ul>
       </div>
@@ -48,21 +51,21 @@
         <p class="text-sm">
             I have developed a set of soft skills that allow me to work effectively in a team and independently. I am always looking for ways to improve my skills and learn new ones. I am not afraid to ask for help when needed, and I am always open to feedback.
         </p>
-        <ul class="list-disc list-inside mt-2 space-y-2">
+        <ul class="list list-inside mt-2 space-y-2">
             <li>
                 <span class="badge preset-filled-success-500">Problem-Solving</span>
                 <span class="badge preset-filled-success-500">Logical Thinking</span>
-                <span class="badge preset-filled-success-500">Attention to Detail</span>
+                <!-- <span class="badge preset-filled-success-500">Attention to Detail</span> -->
             </li>
             <li>
-                <span class="badge preset-filled-warning-500">Effective Communication</span>
+                <!-- <span class="badge preset-filled-warning-500">Effective Communication</span> -->
                 <span class="badge preset-filled-warning-500">Independence & Self-Management</span>
                 <!-- <span class="badge preset-filled-warning-500">Time Management</span> -->
                 <!-- <span class="badge preset-filled-warning-500">Giving & Receiving Feedback</span> -->
             </li>
             <li>
                 <span class="badge preset-filled-error-500">Research & Self-Teaching</span>
-                <span class="badge preset-filled-error-500">Critical Thinking</span>
+                <!-- <span class="badge preset-filled-error-500">Critical Thinking</span> -->
                 <span class="badge preset-filled-error-500">Proactiveness</span>
                 <!-- <span class="badge preset-filled-error-500">Curiosity & Willingness to Learn </span> -->
             </li>
