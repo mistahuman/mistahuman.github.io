@@ -22,7 +22,7 @@
         <h3 class="text-base font-semibold text-primary">
           Alma Mater Studiorum - University of Bologna
         </h3>
-        <p class="text-xs flex items-center gap-2">
+          <p class="text-xs flex flex-wrap items-center gap-3 text-surface-600 dark:text-surface-400">
           <Calendar size={18} /> Sep 2016 - Dec 2019
           <MapPin size={18} /> Bologna
           <Goal size={18} /> 110L/110L
@@ -53,7 +53,7 @@
         <h3 class="text-base font-semibold text-primary">
           Technical Meeting on the Benefits and Challenges of Fast Reactors of the SMR Type
         </h3>
-        <p class="text-xs flex items-center gap-2">
+        <p class="text-xs flex items-center gap-2 text-surface-600 dark:text-surface-400">
           <Calendar size={18} /> Sep 2019
           <MapPin size={18} /> Milan
         </p>
@@ -74,7 +74,7 @@
         <h3 class="text-base font-semibold text-primary">
           Alma Mater Studiorum - University of Bologna
         </h3>
-        <p class="text-xs flex items-center gap-2">
+        <p class="text-xs flex items-center gap-2 text-surface-600 dark:text-surface-400">
           <Calendar size={18} /> Sep 2012 – Mar 2016
           <MapPin size={18} /> Bologna
           <Goal size={18} /> 95/110L
@@ -91,7 +91,7 @@
         <h3 class="text-base font-semibold text-primary">
           G. R. Curbastro Scientific and Technological High School
         </h3>
-        <p class="text-xs flex items-center gap-2">
+        <p class="text-xs flex items-center gap-2 text-surface-600 dark:text-surface-400">
           <Calendar size={18} /> Sep 2007 – Jun 2012
           <MapPin size={18} /> Lugo (RA)
           <Goal size={18} /> 80/100
