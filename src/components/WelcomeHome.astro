@@ -1,42 +1,40 @@
 ---
-import { ChevronRight as IconChevron } from "@lucide/svelte";
-import Logo from "@components/generic/Logo.astro";
+import { ChevronRight as IconChevron } from '@lucide/svelte'
+import Logo from '@components/generic/Logo.astro'
 ---
 
 <div class="grid grid-cols-1 xl:grid-cols-[256px_800px] gap-20">
-	<!-- Mascot -->
-	<div class="flex justify-center items-center">
-		<div
-			class="relative size-48 md:size-64 aspect-square justify-center items-center flex"
-		>
-			<Logo width="200" height="200" />
-			<!-- <div class="absolute top-0 left-0 size-full aspect-square rounded-full bg-conic from-success-500 to-primary-500 blur-3xl">
+  <!-- Mascot -->
+  <div class="flex justify-center items-center">
+    <div class="relative size-48 md:size-64 aspect-square justify-center items-center flex">
+      <Logo width="200" height="200" />
+      <!-- <div class="absolute top-0 left-0 size-full aspect-square rounded-full bg-conic from-success-500 to-primary-500 blur-3xl">
 			</div> -->
-		</div>
-	</div>
-	<!-- Hero Text -->
-	<div class="self-center space-y-4">
-		<!-- Text -->
-		<h1
-			class="heading-font-family text-3xl md:text-4xl font-bold xl:text-balance"
-		>
-			mistahuman's Github Pages
-		</h1>
-		<p class="xl:text-balance">
-			Welcome! I’m <strong class="text-primary-900-100">Marco Lanconelli</strong>, a <u>full stack software engineer</u> working across backend and frontend development.  
-			I focus on building solid, maintainable software and enjoy working on projects that blend performance with clarity.  
-		</p>
+    </div>
+  </div>
+  <!-- Hero Text -->
+  <div class="self-center space-y-4">
+    <!-- Text -->
+    <h1 class="heading-font-family text-3xl md:text-4xl font-bold xl:text-balance">
+      mistahuman's Github Pages
+    </h1>
+    <p class="xl:text-balance">
+      Welcome! I’m <strong class="text-primary-900-100">Marco Lanconelli</strong>, a <u
+        >full stack software engineer</u
+      > working across backend and frontend development. I focus on building solid, maintainable software
+      and enjoy working on projects that blend performance with clarity.
+    </p>
 
-		<!-- CTA Buttons -->
-		<nav class="flex flex-col md:flex-row gap-4">
-			<a href="/mycv" class="btn preset-tonal-secondary">
-				<span>explore my cv</span>
-				<IconChevron className="size-4" />
-			</a>
-			<a href="/projects" class="btn preset-outlined-secondary-500">
-				<span>look out my projects</span>
-				<IconChevron className="size-4" />
-			</a>
-		</nav>
-	</div>
+    <!-- CTA Buttons -->
+    <nav class="flex flex-col md:flex-row gap-4">
+      <a href="/mycv" class="btn preset-tonal-secondary">
+        <span>explore my cv</span>
+        <IconChevron className="size-4" />
+      </a>
+      <a href="/projects" class="btn preset-outlined-secondary-500">
+        <span>look out my projects</span>
+        <IconChevron className="size-4" />
+      </a>
+    </nav>
+  </div>
 </div>

@@ -1,56 +1,47 @@
 ---
 // Component Imports
-import WelcomeHome from "@components/WelcomeHome.astro";
-import ProjectsView from "@components/ProjectsMinimal.astro"
+import WelcomeHome from '@components/WelcomeHome.astro'
+import ProjectsView from '@components/ProjectsMinimal.astro'
 
-import ContactsView from "@components/ContactsView.astro";
+import ContactsView from '@components/ContactsView.astro'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
-import Layout from "@layouts/Layout.astro";
-import MyHero from "@components/MyHero.astro"
-import { ChevronRight as IconChevron } from "@lucide/svelte";
-
+import Layout from '@layouts/Layout.astro'
+import MyHero from '@components/MyHero.astro'
+import { ChevronRight as IconChevron } from '@lucide/svelte'
 ---
 
 <Layout>
-	<!-- <div class="bg-radial-[at_50%_75%] from-sky-200 via-blue-400/10 to-indigo-900 to-90%"> -->
-	<div class="gradient-homepage-one">
-		<section class="">
-			<div
-				class="container mx-auto flex justify-center p-10 pt-20 pb-5"
-			>
-				<WelcomeHome />
-			</div>
-		</section>
-	</div>
-	<div class="gradient-homepage-two">
-		<section class="">
-			<div
-				class="container mx-auto flex justify-center p-10 pt-20 pb-5"
-			>
-				<ProjectsView />
-			</div>
-		</section>
-		<section class="">
-			<div
-			class="text-center space-y-4 p-10 pt-20 pb-5"
-			>
-				<h2 class="h3 underline">About me</h2>
-				<div class="container mx-auto flex justify-center p-10 pt-5 pb-5">
-					<MyHero />
-				</div>
-				<a href="/mycv" class="btn preset-outlined-primary-500">
-					<span>explore my cv</span>
-					<IconChevron className="size-4" />
-				</a>
-			</div>
-		</section>
-		<section class="">
-			<div
-				class="container mx-auto flex justify-center p-10 pt-20 pb-5 mb-20"
-			>
-				<ContactsView />
-			</div>
-		</section>
-	</div>
+  <!-- <div class="bg-radial-[at_50%_75%] from-sky-200 via-blue-400/10 to-indigo-900 to-90%"> -->
+  <div class="gradient-homepage-one">
+    <section class="">
+      <div class="container mx-auto flex justify-center p-10 pt-20 pb-5">
+        <WelcomeHome />
+      </div>
+    </section>
+  </div>
+  <div class="gradient-homepage-two">
+    <section class="">
+      <div class="container mx-auto flex justify-center p-10 pt-20 pb-5">
+        <ProjectsView />
+      </div>
+    </section>
+    <section class="">
+      <div class="text-center space-y-4 p-10 pt-20 pb-5">
+        <h2 class="h3 underline">About me</h2>
+        <div class="container mx-auto flex justify-center p-10 pt-5 pb-5">
+          <MyHero />
+        </div>
+        <a href="/mycv" class="btn preset-outlined-primary-500">
+          <span>explore my cv</span>
+          <IconChevron className="size-4" />
+        </a>
+      </div>
+    </section>
+    <section class="">
+      <div class="container mx-auto flex justify-center p-10 pt-20 pb-5 mb-20">
+        <ContactsView />
+      </div>
+    </section>
+  </div>
 </Layout>

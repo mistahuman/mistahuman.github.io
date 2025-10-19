@@ -1,16 +1,15 @@
 ---
-import LayoutRoot from "@layouts/LayoutRoot.astro";
-import Header from "@components/generic/Header.astro";
-import Footer from "@components/generic/Footer.astro";
-
+import LayoutRoot from '@layouts/LayoutRoot.astro'
+import Header from '@components/generic/Header.astro'
+import Footer from '@components/generic/Footer.astro'
 ---
 
 <LayoutRoot>
-	<div class="grid h-screen grid-rows-[auto_1fr_auto] max-w-full">
-		<Header></Header>
-		<main class="bg-surface-50-950">
-			<slot></slot>
-		</main>
-		<Footer />
-	</div>
+  <div class="grid h-screen grid-rows-[auto_1fr_auto] max-w-full">
+    <Header />
+    <main class="bg-surface-50-950">
+      <slot />
+    </main>
+    <Footer />
+  </div>
 </LayoutRoot>

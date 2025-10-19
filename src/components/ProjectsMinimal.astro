@@ -1,62 +1,61 @@
 ---
-import { ExternalLink, Github } from "@lucide/svelte";
-import { ChevronRight as IconChevron } from "@lucide/svelte";
-
+import { ExternalLink, Github } from '@lucide/svelte'
+import { ChevronRight as IconChevron } from '@lucide/svelte'
 
 const featuredProjects = [
   {
-    title: "Landing page – Andrea Faccani",
-    description: "modern landing page with a clean design",
-    liveUrl: "https://mistahuman.github.io/landpage-andreafaccani/",
-    githubUrl: "https://github.com/mistahuman/landpage-andreafaccani",
-    tech: ["Astro", "Svelte", "Skeleton UI"],
-    color: "preset-filled-surface-50-950"
+    title: 'Landing page – Andrea Faccani',
+    description: 'modern landing page with a clean design',
+    liveUrl: 'https://mistahuman.github.io/landpage-andreafaccani/',
+    githubUrl: 'https://github.com/mistahuman/landpage-andreafaccani',
+    tech: ['Astro', 'Svelte', 'Skeleton UI'],
+    color: 'preset-filled-surface-50-950',
   },
   {
-    title: "Portfolio – Davide Sigillo",
-    description: "personal portfolio with a minimalist design",
-    liveUrl: "https://mistahuman.github.io/portfolio-davidesigillo/",
-    githubUrl: "https://github.com/mistahuman/portfolio-davidesigillo",
-    tech: ["Astro", "TailwindCSS"],
-    color: "preset-filled-surface-50-950"
-  }
-];
+    title: 'Portfolio – Davide Sigillo',
+    description: 'personal portfolio with a minimalist design',
+    liveUrl: 'https://mistahuman.github.io/portfolio-davidesigillo/',
+    githubUrl: 'https://github.com/mistahuman/portfolio-davidesigillo',
+    tech: ['Astro', 'TailwindCSS'],
+    color: 'preset-filled-surface-50-950',
+  },
+]
 ---
 
 <section class="space-y-6">
   <h2 class="h3 text-center underline">Featured projects</h2>
-  
+
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-    {featuredProjects.map(project => (
-      <div class={`card ${project.color} p-5 space-y-4 transition-shadow hover:shadow-xl border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w-md overflow-hidden`}>
-        <h3 class="h4 font-semibold">{project.title}</h3>
-        <p class="text-surface-600-400">{project.description}</p>
-        <div class="flex flex-wrap gap-3 pt-2">
-          <a 
-            href={project.liveUrl} 
-            target="_blank"
-            class="btn btn-sm preset-filled-primary-500"
-          >
-            <ExternalLink class="w-4 h-4" />
-            <span>live demo</span>
-          </a>
-          <a 
-            href={project.githubUrl}
-            target="_blank" 
-            class="btn btn-sm preset-outlined-primary-500"
-          >
-            <Github class="w-4 h-4" />
-            <span>code</span>
-          </a>
+    {
+      featuredProjects.map((project) => (
+        <div
+          class={`card ${project.color} p-5 space-y-4 transition-shadow hover:shadow-xl border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w-md overflow-hidden`}
+        >
+          <h3 class="h4 font-semibold">{project.title}</h3>
+          <p class="text-surface-600-400">{project.description}</p>
+          <div class="flex flex-wrap gap-3 pt-2">
+            <a href={project.liveUrl} target="_blank" class="btn btn-sm preset-filled-primary-500">
+              <ExternalLink class="w-4 h-4" />
+              <span>live demo</span>
+            </a>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              class="btn btn-sm preset-outlined-primary-500"
+            >
+              <Github class="w-4 h-4" />
+              <span>code</span>
+            </a>
+          </div>
         </div>
-      </div>
-    ))}
+      ))
+    }
   </div>
-  
+
   <div class="text-center pt-6">
     <a href="/projects" class="btn preset-outlined-primary-500">
-        <span>view all my projects</span>
-        <IconChevron className="size-4" />
+      <span>view all my projects</span>
+      <IconChevron className="size-4" />
     </a>
   </div>
 </section>

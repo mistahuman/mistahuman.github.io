@@ -34,35 +34,33 @@
 /* Set Selector dark mode strategy */
 @custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
 
-
 /* Global Styles */
 
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 /* Local Utilities --- */
 
 .flex-centered {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
 
 /* Homepage Gradients */
 .gradient-homepage-one {
-	background-size: cover;
-	/* prettier-ignore */
-	background-image:
+  background-size: cover;
+  /* prettier-ignore */
+  background-image:
 		radial-gradient(at 24% 25%, color-mix(in oklab, var(--color-primary-500) 30%, transparent) 0px, transparent 30%),
 		radial-gradient(at 35% 13%, color-mix(in oklab, var(--color-success-500) 18%, transparent) 0px, transparent 30%),
 		radial-gradient(at 100% 64%, color-mix(in oklab, var(--color-error-500) 3%, transparent) 0px, transparent 40%);
 }
 .gradient-homepage-two {
-	background-size: cover;
-	/* prettier-ignore */
-	background-image:
+  background-size: cover;
+  /* prettier-ignore */
+  background-image:
 		radial-gradient(at 25% 40%, color-mix(in oklab, var(--color-primary-500) 10%, transparent) 0px, transparent 35%),
 		radial-gradient(at 100% 58%, color-mix(in oklab, var(--color-success-500) 5%, transparent) 0px, transparent 35%);
 }
@@ -74,7 +72,6 @@ html {
 [data-theme='reign'],
 [data-theme='terminus'],
 [data-theme='vox'],
-
 [data-theme='catppuccin'],
 [data-theme='cerberus'],
 [data-theme='crimson'],
@@ -92,37 +89,36 @@ html {
 [data-theme='seafoam'],
 [data-theme='vintage'],
 [data-theme='wintry'] {
-	& body {
-		/* OPTIONAL: Background Mesh Gradient */
-  		/* https://next.skeleton.dev/docs/design/themes#backgrounds */
-		/* prettier-ignore */
-		background-attachment: fixed;
-		/* prettier-ignore */
-		background-image:
+  & body {
+    /* OPTIONAL: Background Mesh Gradient */
+    /* https://next.skeleton.dev/docs/design/themes#backgrounds */
+    /* prettier-ignore */
+    background-attachment: fixed;
+    /* prettier-ignore */
+    background-image:
 		radial-gradient(at 0% 25%, color-mix(in oklab, var(--color-primary-500) 10%, transparent) 0px, transparent 30%),
 		radial-gradient(at 15% 06%, color-mix(in oklab, var(--color-success-500) 5%, transparent) 0px, transparent 30%);
-	}
+  }
 }
-
 
 /* Filled Cards */
 .card-filled-enhanced {
-	border-radius: var(--radius-container);
-	background-color: var(--color-primary-500);
-	color: var(--color-primary-contrast-500);
+  border-radius: var(--radius-container);
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-contrast-500);
 }
 
 /* Linker */
 /* Prominant link elements for MDX pages */
 
 .linker {
-	border-radius: var(--radius-container);
-	display: flex;
-	justify-content: center;
-	padding-inline: --spacing(4);
-	padding-block: --spacing(10);
-	background-color: var(--color-primary-500);
-	color: var(--color-primary-contrast-500);
+  border-radius: var(--radius-container);
+  display: flex;
+  justify-content: center;
+  padding-inline: --spacing(4);
+  padding-block: --spacing(10);
+  background-color: var(--color-primary-500);
+  color: var(--color-primary-contrast-500);
 }
 
 /* Floating UI */
@@ -130,21 +126,21 @@ html {
 /* https://floating-ui-svelte.vercel.app/docs/getting-started */
 
 .floating {
-	width: max-content;
-	position: absolute;
-	top: 0;
-	left: 0;
+  width: max-content;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 /* useTransition - https://floating-ui.com/docs/useTransition#usetransitionstatus */
 .floating {
-	transition-property: opacity;
+  transition-property: opacity;
 }
 .floating[data-status='open'],
 .floating[data-status='close'] {
-	transition-duration: 250ms;
+  transition-duration: 250ms;
 }
 .floating[data-status='initial'],
 .floating[data-status='close'] {
-	opacity: 0;
+  opacity: 0;
 }

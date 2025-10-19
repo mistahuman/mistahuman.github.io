@@ -1,27 +1,26 @@
 ---
-import AccordionEducation from "@components/aboutme/AccordionEducation.svelte"
-import AccordionWork from "@components/aboutme/AccordionWork.svelte"
-import AccordionSkills from "@components/aboutme/AccordionSkills.svelte"
-import MyHero from "@components/MyHero.astro"
-import Aboutme from "@components/aboutme/Aboutme.astro"
-import Card from "@components/generic/Card.astro"
+import AccordionEducation from '@components/aboutme/AccordionEducation.svelte'
+import AccordionWork from '@components/aboutme/AccordionWork.svelte'
+import AccordionSkills from '@components/aboutme/AccordionSkills.svelte'
+import MyHero from '@components/MyHero.astro'
+import Aboutme from '@components/aboutme/Aboutme.astro'
+import Card from '@components/generic/Card.astro'
 ---
 
 <div class="p-4 justify-items-center mb-5">
-    <MyHero></MyHero>
+  <MyHero />
 </div>
-<div class="p-4 grid grid-cols-1 gap-4 lg:grid-cols-2 justify-items-center">    
-    <Card title="About me">
-        <Aboutme />
-    </Card>
-    <Card title="Work">
-        <AccordionWork client:load="svelte"></AccordionWork>
-    </Card>
-    <Card title="Education">
-        <AccordionEducation client:load="svelte"></AccordionEducation>
-    </Card>
-    <Card title="Skills">
-        <AccordionSkills client:load="svelte"></AccordionSkills>
-    </Card>
-
+<div class="p-4 grid grid-cols-1 gap-4 lg:grid-cols-2 justify-items-center">
+  <Card title="About me">
+    <Aboutme />
+  </Card>
+  <Card title="Work">
+    <AccordionWork client:load="svelte" />
+  </Card>
+  <Card title="Education">
+    <AccordionEducation client:load="svelte" />
+  </Card>
+  <Card title="Skills">
+    <AccordionSkills client:load="svelte" />
+  </Card>
 </div>

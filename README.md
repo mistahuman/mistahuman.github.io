@@ -22,3 +22,4 @@ git clone https://github.com/mistahuman/mistahuman.github.io.git
 cd mistahuman.github.io
 npm install
 npm run dev
+```

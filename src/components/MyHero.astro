@@ -1,44 +1,40 @@
 ---
-import Avatar from "@components/aboutme/Avatar.svelte";
-import { Download, Cake } from "@lucide/svelte";
+import Avatar from '@components/aboutme/Avatar.svelte'
+import { Download, Cake } from '@lucide/svelte'
 ---
 
 <div class="grid grid-cols-1 gap-10">
-	<!-- Mascot -->
-	<div class="flex justify-center items-center">
-		<Avatar client:load="svelte" />
-	</div>
-	<!-- Hero Text -->
-	<div class="self-center text-center space-y-2">
-		<!-- Text -->
-		<h1
-			class="heading-font-family text-3xl md:text-4xl font-bold xl:text-balance"
-		>
-			Marco Lanconelli
-		</h1>
-		<!-- <p class="xl:text-balance">
+  <!-- Mascot -->
+  <div class="flex justify-center items-center">
+    <Avatar client:load="svelte" />
+  </div>
+  <!-- Hero Text -->
+  <div class="self-center text-center space-y-2">
+    <!-- Text -->
+    <h1 class="heading-font-family text-3xl md:text-4xl font-bold xl:text-balance">
+      Marco Lanconelli
+    </h1>
+    <!-- <p class="xl:text-balance">
 		</p> -->
-		<p class="opacity-80 text-sm">
-			software engineer and fullstack developer
-		</p>
-		<p class="opacity-60 text-xs">
-			<Cake size={16} class="align-middle inline-block" /> 09 July 1993
-		</p>
-		<p class="opacity-60 text-xs">based in Bologna, Italy</p>
-		<a
-			href="/marcolanconelli_cv.pdf"
-			download="marcolanconelli_cv.pdf"
-			class="btn btn-sm preset-tonal-primary mt-2"
-		>
-			<Download size={20} />
-			<span>get mycv in ita</span>
-		</a>
-		<!-- <blockquote class="blockquote text-sm">
+    <p class="opacity-80 text-sm">software engineer and fullstack developer</p>
+    <p class="opacity-60 text-xs">
+      <Cake size={16} class="align-middle inline-block" /> 09 July 1993
+    </p>
+    <p class="opacity-60 text-xs">based in Bologna, Italy</p>
+    <a
+      href="/marcolanconelli_cv.pdf"
+      download="marcolanconelli_cv.pdf"
+      class="btn btn-sm preset-tonal-primary mt-2"
+    >
+      <Download size={20} />
+      <span>get mycv in ita</span>
+    </a>
+    <!-- <blockquote class="blockquote text-sm">
 		"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt, aliquid. Molestias, odio illum voluptatibus natus dignissimos, quidem
 		est unde aspernatur veniam pariatur fuga distinctio esse in quas, repellendus neque reiciendis!"
 		</blockquote> -->
-		<!-- CTA Buttons -->
-		<!-- <nav class="flex gap-4">
+    <!-- CTA Buttons -->
+    <!-- <nav class="flex gap-4">
 		</nav> -->
-	</div>
+  </div>
 </div>
