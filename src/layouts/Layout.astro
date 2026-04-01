@@ -2,6 +2,7 @@
 import LayoutRoot from '@layouts/LayoutRoot.astro'
 import Header from '@components/generic/Header.astro'
 import Footer from '@components/generic/Footer.astro'
+import DestroyMode from '@components/DestroyMode.svelte'
 ---
 
 <LayoutRoot>
@@ -12,4 +13,5 @@ import Footer from '@components/generic/Footer.astro'
     </main>
     <Footer />
   </div>
+  <DestroyMode client:load />
 </LayoutRoot>
