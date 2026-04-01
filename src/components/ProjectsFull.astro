@@ -17,6 +17,16 @@ type Project = {
 
 const allProjects: Project[] = [
   {
+    title: 'Template Astro Svelte Skeleton',
+    description: 'mistahuman template for building pages',
+    liveUrl: 'https://mistahuman.github.io/template-astro-svelte-skeleton/',
+    githubUrl: 'https://github.com/mistahuman/template-astro-svelte-skeleton',
+    tech: ['Astro', 'Svelte', 'Skeleton UI'],
+    date: '2026',
+    status: 'completed',
+    featured: true,
+  },
+  {
     title: 'Portfolio - Davide Sigillo',
     description: 'personal portfolio with a minimalist design',
     liveUrl: 'https://mistahuman.github.io/portfolio-davidesigillo/',
@@ -29,14 +39,14 @@ const allProjects: Project[] = [
   {
     title: 'Landing page - Andrea Faccani',
     description: 'modern landing page with a clean design',
-    liveUrl: 'https://mistahuman.github.io/landpage-andreafaccani/',
+    liveUrl: 'https://www.andreafaccani-fisioterapista.it/',
     githubUrl: 'https://github.com/mistahuman/landpage-andreafaccani',
     tech: ['Astro', 'Svelte', 'Skeleton UI'],
     date: '2025',
     status: 'completed',
     featured: true,
   },
-  // Aggiungi altri progetti qui
+
 ]
 const statusClasses: Record<ProjectStatus, string> = {
   completed: 'preset-filled-success-500',
@@ -51,7 +61,7 @@ const statusClasses: Record<ProjectStatus, string> = {
     <p class="text-surface-600 dark:text-surface-400">a collection of my recent works</p>
   </header>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+  <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
     {
       allProjects.map((project) => (
         <article class="card preset-filled-surface-100-900 border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w divide-y overflow-hidden">
