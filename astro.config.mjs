@@ -11,5 +11,8 @@ export default defineConfig({
   integrations: [svelte()],
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      noExternal: ['@lucide/svelte', '@skeletonlabs/skeleton-svelte'],
+    },
   },
 })
