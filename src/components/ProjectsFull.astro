@@ -1,88 +1,7 @@
 ---
 // ProjectsFull.astro
 import { ExternalLink, Github, Calendar, Code, Eye } from '@lucide/svelte'
-
-type ProjectStatus = 'completed' | 'inProgress' | 'planned'
-
-type Project = {
-  title: string
-  description: string
-  liveUrl: string
-  githubUrl: string
-  tech: string[]
-  date: string
-  status: ProjectStatus
-  featured: boolean
-}
-
-const allProjects: Project[] = [
-  {
-    title: 'Hypemeter',
-    description: 'tbd',
-    liveUrl: 'https://mistahuman.github.io/hypemeter/',
-    githubUrl: 'https://github.com/mistahuman/hypemeter',
-    tech: ['Astro', 'Svelte', 'Skeleton UI'],
-    date: '2026',
-    status: 'completed',
-    featured: true,
-  },
-  {
-    title: 'Mistadex',
-    description: 'tbd',
-    liveUrl: 'https://mistahuman.github.io/mistadex/',
-    githubUrl: 'https://github.com/mistahuman/mistadex',
-    tech: ['Astro', 'Svelte', 'Skeleton UI'],
-    date: '2026',
-    status: 'completed',
-    featured: true,
-  },
-  {
-    title: 'Mistageo',
-    description: 'mistahuman template for building pages',
-    liveUrl: 'https://mistahuman.github.io/mistageo/',
-    githubUrl: 'https://github.com/mistahuman/mistageo',
-    tech: ['Astro', 'Svelte', 'Skeleton UI'],
-    date: '2026',
-    status: 'completed',
-    featured: true,
-  },
-  {
-    title: 'Template Astro Svelte Skeleton',
-    description: 'mistahuman template for building pages',
-    liveUrl: 'https://mistahuman.github.io/template-astro-svelte-skeleton/',
-    githubUrl: 'https://github.com/mistahuman/template-astro-svelte-skeleton',
-    tech: ['Astro', 'Svelte', 'Skeleton UI'],
-    date: '2026',
-    status: 'completed',
-    featured: true,
-  },
-  {
-    title: 'Portfolio - Davide Sigillo',
-    description: 'personal portfolio with a minimalist design',
-    liveUrl: 'https://mistahuman.github.io/portfolio-davidesigillo/',
-    githubUrl: 'https://github.com/mistahuman/portfolio-davidesigillo',
-    tech: ['Astro', 'TailwindCSS'],
-    date: '2025',
-    status: 'completed',
-    featured: true,
-  },
-  {
-    title: 'Landing page - Andrea Faccani',
-    description: 'modern landing page with a clean design',
-    liveUrl: 'https://www.andreafaccani-fisioterapista.it/',
-    githubUrl: 'https://github.com/mistahuman/landpage-andreafaccani',
-    tech: ['Astro', 'Svelte', 'Skeleton UI'],
-    date: '2025',
-    status: 'completed',
-    featured: true,
-  },
-
-]
-const statusClasses: Record<ProjectStatus, string> = {
-  completed: 'preset-filled-success-500',
-  inProgress: 'preset-filled-warning-500',
-  planned: 'preset-filled-surface-500',
-}
+import { projects } from '../data/projects'
 ---
 
 <div class="container mx-auto space-y-8">
@@ -93,7 +12,7 @@ const statusClasses: Record<ProjectStatus, string> = {
 
   <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
     {
-      allProjects.map((project) => (
+      projects.map((project) => (
         <article class="card preset-filled-surface-100-900 border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w divide-y overflow-hidden">
           <div class="relative h-48 bg-surface-200 dark:bg-surface-800 overflow-hidden">
             <iframe
@@ -110,7 +29,7 @@ const statusClasses: Record<ProjectStatus, string> = {
             <header class="space-y-2">
               <div class="flex items-start justify-between">
                 <h3 class="h3">{project.title}</h3>
-                {project.featured && <span class="badge preset-filled-warning-500">featured</span>}
+                {/* {project.featured && <span class="badge preset-filled-warning-500">featured</span>} */}
               </div>
               <p class="text-surface-600 dark:text-surface-400">{project.description}</p>
             </header>
@@ -128,13 +47,13 @@ const statusClasses: Record<ProjectStatus, string> = {
               <div class="flex items-center gap-2 text-sm text-surface-600 dark:text-surface-400">
                 <Calendar class="w-4 h-4" />
                 <span>{project.date}</span>
-                <span class={`chip ${statusClasses[project.status]} text-xs ml-2`}>
+                {/* <span class={`chip ${statusClasses[project.status]} text-xs ml-2`}>
                   {project.status === 'completed'
                     ? 'completed'
                     : project.status === 'inProgress'
                       ? 'in progress'
                       : 'planned'}
-                </span>
+                </span> */}
               </div>
 
               <div class="flex gap-2">
@@ -161,19 +80,6 @@ const statusClasses: Record<ProjectStatus, string> = {
       ))
     }
   </div>
-  <!-- <div class="text-center pt-8 mb-5">
-    <p class="text-surface-600 dark:text-surface-400 mb-4">
-      Want to see more?
-    </p>
-    <a
-      href="https://github.com/mistahuman?tab=repositories"
-      target="_blank"
-      class="btn preset-filled-primary-500 inline-flex items-center gap-2"
-    >
-      <Github class="w-4 h-4" />
-      View more projects on GitHub
-    </a>
-  </div> -->
   <div class="text-center py-12">
     <h2 class="h4 mb-3">More projects</h2>
     <a
