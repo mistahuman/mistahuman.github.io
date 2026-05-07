@@ -23,6 +23,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'Mistatools',
+    description: 'mistahuman tools',
+    liveUrl: 'https://mistahuman.github.io/mistatools/',
+    githubUrl: 'https://github.com/mistahuman/mistatools',
+    tech: ['SvelteKit', 'Skeleton UI'],
+    date: '2026',
+    status: 'completed',
+    featured: true,
+  },
+  {
     title: 'Template Astro Svelte Skeleton',
     description: 'mistahuman template for building pages',
     liveUrl: 'https://mistahuman.github.io/astro-svelte-skeleton-starter/',
