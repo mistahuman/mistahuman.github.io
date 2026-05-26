@@ -1,14 +1,16 @@
 export type ProjectStatus = 'completed' | 'inProgress' | 'planned'
+export type ProjectCategory = 'web' | 'academic'
 
 export type Project = {
   title: string
   description: string
-  liveUrl: string
+  liveUrl?: string
   githubUrl: string
   tech: string[]
   date: string
   status: ProjectStatus
   featured: boolean
+  category?: ProjectCategory
 }
 
 export const projects: Project[] = [
@@ -71,5 +73,34 @@ export const projects: Project[] = [
     date: '2025',
     status: 'completed',
     featured: false,
+  },
+  {
+    title: 'LaTeX Document Template',
+    description: 'clean LaTeX starter with cover page, styled header/footer, and code highlighting',
+    githubUrl: 'https://github.com/mistahuman/template-latex',
+    tech: ['LaTeX'],
+    date: '2026',
+    status: 'completed',
+    featured: false,
+  },
+  {
+    title: 'ALFRED LFR – Master\'s Thesis',
+    description: 'modelling of a Lead-cooled Fast Reactor with neutronics–thermohydraulics coupling on the FEMuS multi-physics platform',
+    githubUrl: 'https://github.com/mistahuman/alfred-lfr-thesis',
+    tech: ['LaTeX', 'Dragon5/Donjon5', 'FEMuS'],
+    date: '2019',
+    status: 'completed',
+    featured: false,
+    category: 'academic',
+  },
+  {
+    title: 'Nuclear Engineering Homeworks',
+    description: 'collection of reports and projects from the M.Sc. in Energy Engineering (Nuclear track) at UniBO',
+    githubUrl: 'https://github.com/mistahuman/nuclear-engineer-homeworks',
+    tech: ['LaTeX', 'MATLAB', 'Python'],
+    date: '2016–2019',
+    status: 'completed',
+    featured: false,
+    category: 'academic',
   },
 ]

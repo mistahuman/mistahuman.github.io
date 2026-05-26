@@ -28,7 +28,7 @@
             <span class="badge preset-filled-secondary-500">C</span>
             <span class="badge preset-filled-secondary-500">Python</span>
             <span class="badge preset-filled-secondary-500">Rust</span>
-            <span class="badge preset-filled-secondary-500">FastAPI</span>
+            <span class="badge preset-filled-secondary-500">Go</span>
           </li>
           <li>
             <span class="badge preset-filled-tertiary-500">MongoDB</span>

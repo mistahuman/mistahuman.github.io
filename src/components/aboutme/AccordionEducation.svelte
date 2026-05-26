@@ -40,6 +40,20 @@
             The numerical platform enables a comprehensive simulation of reactor physics through the
             implementation of the Dragon/Donjon neutronic code and the FEMuS thermohydraulic code.
           </p>
+          <p>
+            <i>Repository:</i>
+            <a href="https://github.com/mistahuman/alfred-lfr-thesis" target="_blank" class="anchor">
+              mistahuman/alfred-lfr-thesis
+            </a>
+            — thesis, slides & conference paper.
+          </p>
+          <p>
+            <i>Coursework:</i>
+            <a href="https://github.com/mistahuman/nuclear-engineer-homeworks" target="_blank" class="anchor">
+              mistahuman/nuclear-engineer-homeworks
+            </a>
+            — reports and projects from the M.Sc. programme.
+          </p>
         </div>
       </div>
     {/snippet}
