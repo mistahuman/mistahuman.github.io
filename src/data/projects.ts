@@ -1,5 +1,5 @@
 export type ProjectStatus = 'completed' | 'inProgress' | 'planned'
-export type ProjectCategory = 'web' | 'academic'
+export type ProjectCategory = 'web' | 'academic' | 'template'
 
 export type Project = {
   title: string
@@ -35,26 +35,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'Template Astro Svelte Skeleton',
-    description: 'mistahuman template for building pages',
-    liveUrl: 'https://mistahuman.github.io/astro-svelte-skeleton-starter/',
-    githubUrl: 'https://github.com/mistahuman/astro-svelte-skeleton-starter',
-    tech: ['Astro', 'Svelte', 'Skeleton UI'],
-    date: '2026',
-    status: 'completed',
-    featured: true,
-  },
-  {
-    title: 'Template SvelteKit Skeleton',
-    description: 'mistahuman template for building webapps',
-    liveUrl: 'https://mistahuman.github.io/sveltekit-skeleton-starter/',
-    githubUrl: 'https://github.com/mistahuman/sveltekit-skeleton-starter',
-    tech: ['SvelteKit', 'Skeleton UI'],
-    date: '2026',
-    status: 'completed',
-    featured: true,
-  },
-  {
     title: 'Portfolio – Davide Sigillo',
     description: 'personal portfolio with a minimalist design',
     liveUrl: 'https://mistahuman.github.io/portfolio-davidesigillo/',
@@ -74,6 +54,69 @@ export const projects: Project[] = [
     status: 'completed',
     featured: false,
   },
+  // Templates
+  {
+    title: 'Astro Svelte Skeleton Starter',
+    description: 'starter template for building static pages and portfolios',
+    liveUrl: 'https://mistahuman.github.io/astro-svelte-skeleton-starter/',
+    githubUrl: 'https://github.com/mistahuman/astro-svelte-skeleton-starter',
+    tech: ['Astro', 'Svelte', 'Skeleton UI', 'TailwindCSS'],
+    date: '2026',
+    status: 'completed',
+    featured: true,
+    category: 'template',
+  },
+  {
+    title: 'SvelteKit Skeleton Starter',
+    description: 'starter template for building web applications',
+    liveUrl: 'https://mistahuman.github.io/sveltekit-skeleton-starter/',
+    githubUrl: 'https://github.com/mistahuman/sveltekit-skeleton-starter',
+    tech: ['SvelteKit', 'Skeleton UI', 'TailwindCSS', 'TypeScript'],
+    date: '2026',
+    status: 'completed',
+    featured: true,
+    category: 'template',
+  },
+  {
+    title: 'FastAPI MongoDB Starter',
+    description: 'minimal REST API backend starter with async Python',
+    githubUrl: 'https://github.com/mistahuman/fastapi-mongodb-starter',
+    tech: ['FastAPI', 'Beanie', 'MongoDB', 'Python'],
+    date: '2026',
+    status: 'completed',
+    featured: false,
+    category: 'template',
+  },
+  {
+    title: 'Gin MongoDB Starter',
+    description: 'minimal REST API backend starter with Go',
+    githubUrl: 'https://github.com/mistahuman/gin-mongodb-starter',
+    tech: ['Gin', 'MongoDB', 'Go'],
+    date: '2026',
+    status: 'completed',
+    featured: false,
+    category: 'template',
+  },
+  {
+    title: 'Axum MongoDB Starter',
+    description: 'minimal REST API backend starter with Rust',
+    githubUrl: 'https://github.com/mistahuman/axum-mongodb-starter',
+    tech: ['Axum', 'MongoDB', 'Rust'],
+    date: '2026',
+    status: 'completed',
+    featured: false,
+    category: 'template',
+  },
+  {
+    title: 'Fullstack Webapp Starter',
+    description: 'Docker Compose monorepo wiring backend, SvelteKit and MongoDB via Nginx',
+    githubUrl: 'https://github.com/mistahuman/fullstack-webapp-starter',
+    tech: ['Docker', 'Nginx', 'SvelteKit', 'MongoDB'],
+    date: '2026',
+    status: 'completed',
+    featured: false,
+    category: 'template',
+  },
   {
     title: 'LaTeX Document Template',
     description: 'clean LaTeX starter with cover page, styled header/footer, and code highlighting',
@@ -82,7 +125,9 @@ export const projects: Project[] = [
     date: '2026',
     status: 'completed',
     featured: false,
+    category: 'template',
   },
+  // Academic
   {
     title: 'ALFRED LFR – Master\'s Thesis',
     description: 'modelling of a Lead-cooled Fast Reactor with neutronics–thermohydraulics coupling on the FEMuS multi-physics platform',
