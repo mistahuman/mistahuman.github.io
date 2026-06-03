@@ -42,8 +42,8 @@
           </p>
           <p>
             <i>Repository:</i>
-            <a href="https://github.com/mistahuman/alfred-lfr-thesis" target="_blank" class="anchor">
-              mistahuman/alfred-lfr-thesis
+            <a href="https://github.com/mistahuman/marcolanconelli-thesis" target="_blank" class="anchor">
+              mistahuman/marcolanconelli-thesis
             </a>
             — thesis, slides & conference paper.
           </p>
