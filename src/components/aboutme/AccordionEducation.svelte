@@ -45,14 +45,14 @@
             <a href="https://github.com/mistahuman/marcolanconelli-thesis" target="_blank" class="anchor">
               mistahuman/marcolanconelli-thesis
             </a>
-            — thesis, slides & conference paper.
+            (thesis, slides & conference paper).
           </p>
           <p>
             <i>Coursework:</i>
             <a href="https://github.com/mistahuman/nuclear-engineer-homeworks" target="_blank" class="anchor">
               mistahuman/nuclear-engineer-homeworks
             </a>
-            — reports and projects from the M.Sc. programme.
+            (reports and projects from the M.Sc. programme).
           </p>
         </div>
       </div>

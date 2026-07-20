@@ -30,26 +30,32 @@
 
         <div class="mt-3 text-sm space-y-3 leading-relaxed">
           <p>
-            I help companies design and deliver scalable software solutions — from microservice
+            I help companies design and deliver scalable software solutions, from microservice
             architectures to full-stack web applications.
           </p>
 
           <p class="pt-1 font-medium text-surface-700 dark:text-surface-300">Main projects:</p>
           <ul class="list-disc pl-5 space-y-3">
             <li>
-              <strong>Cloud Service Orchestration Platform</strong>
+              <strong>Cloud Service Orchestration Platform (IPCEI-CIS)</strong>
               <p class="text-xs text-surface-500 dark:text-surface-400 flex items-center gap-1 mt-0.5">
                 <Calendar size={14} /> Oct 2025 – Present
               </p>
               <p>
-                Enterprise telecom project — TMF-standard orchestration platform with Go microservices,
-                Kubernetes operators, and a Vue.js console.
+                Multi-tenant platform managing the lifecycle of cloud and edge services, built on
+                TM Forum Open API standards within the European IPCEI-CIS programme.
               </p>
+              <ul class="list-disc pl-5 space-y-1 mt-1">
+                <li><strong>Go backend services</strong> with a multi-tenant ownership model.</li>
+                <li><strong>Kubernetes operators</strong> with custom CRDs for orders and resources.</li>
+                <li><strong>Vue 3 console</strong> and its end-to-end test suite.</li>
+              </ul>
               <div class="flex flex-wrap gap-1 mt-1">
                 <span class="badge preset-outlined-secondary-500">Go</span>
                 <span class="badge preset-outlined-secondary-500">Kubernetes</span>
+                <span class="badge preset-outlined-secondary-500">TM Forum Open API</span>
                 <span class="badge preset-outlined-secondary-500">Vue.js</span>
-                <span class="badge preset-outlined-secondary-500">Argo Workflows</span>
+                <span class="badge preset-outlined-secondary-500">MongoDB</span>
                 <span class="badge preset-outlined-secondary-500">Helm</span>
               </div>
             </li>

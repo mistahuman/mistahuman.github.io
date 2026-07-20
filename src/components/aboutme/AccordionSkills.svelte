@@ -21,6 +21,7 @@
         <ul class="list list-inside mt-2 space-y-2">
           <li>
             <span class="badge preset-filled-primary-500">SvelteKit</span>
+            <span class="badge preset-filled-primary-500">Astro</span>
             <span class="badge preset-filled-primary-500">Skeleton UI Toolkit</span>
             <span class="badge preset-filled-primary-500">Vue.js</span>
           </li>
@@ -34,6 +35,7 @@
             <span class="badge preset-filled-tertiary-500">MongoDB</span>
             <span class="badge preset-filled-tertiary-500">Docker</span>
             <span class="badge preset-filled-tertiary-500">Kubernetes</span>
+            <span class="badge preset-filled-tertiary-500">Helm</span>
             <span class="badge preset-filled-tertiary-500">CI/CD</span>
             <span class="badge preset-filled-tertiary-500">Linux</span>
           </li>
