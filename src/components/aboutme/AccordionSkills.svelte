@@ -1,17 +1,27 @@
 <script lang="ts">
-  import { Accordion } from '@skeletonlabs/skeleton-svelte'
+  import { Accordion } from '@skeletonlabs/skeleton-svelte';
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
   // Icons
-  import Wrench from '@lucide/svelte/icons/wrench'
-  import HeartPulse from '@lucide/svelte/icons/heart-pulse'
+  import Wrench from '@lucide/svelte/icons/wrench';
+  import HeartPulse from '@lucide/svelte/icons/heart-pulse';
 
-  let value = $state(['tech'])
+  let value = $state(['tech']);
 </script>
 
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
   <Accordion.Item value="tech">
-    {#snippet lead()}<Wrench size={24} />{/snippet}
-    {#snippet control()}Tech{/snippet}
-    {#snippet panel()}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <Wrench size={24} />
+      <span>Tech</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-1">
         <p class="text-sm">
           I have experience with a wide range of technologies, from web development to embedded
@@ -44,13 +54,22 @@
           </li>
         </ul>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
   <hr class="hr" />
   <Accordion.Item value="soft">
-    {#snippet lead()}<HeartPulse size={24} />{/snippet}
-    {#snippet control()}Soft{/snippet}
-    {#snippet panel()}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <HeartPulse size={24} />
+      <span>Soft</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-1">
         <p class="text-sm">
           I have developed a set of soft skills that allow me to work effectively in a team and
@@ -77,6 +96,6 @@
           </li>
         </ul>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
 </Accordion>

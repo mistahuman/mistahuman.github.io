@@ -1,17 +1,19 @@
 ---
 // Components
-import Drawer from '@components/generic/Drawer.astro'
-import Logo from '@components/generic/Logo.astro'
-import Lightswitch from '@components/generic/Lightswitch.astro'
+import Drawer from '@components/generic/Drawer.astro';
+import Logo from '@components/generic/Logo.astro';
+import Lightswitch from '@components/generic/Lightswitch.astro';
+import ThemeSwitch from '@components/generic/ThemeSwitch.svelte';
+import { THEME_PICKER, DEFAULT_THEME } from '@config';
 // Icons
-import { Linkedin, Github, Instagram, Mail } from '@lucide/svelte'
+import { Linkedin, Github, Instagram, Mail } from '@lucide/svelte';
 
 const coreLinks = [
   { href: '/', label: 'home', target: '_self' },
   { href: '/mycv', label: 'mycv', target: '_self' },
   { href: '/projects', label: 'projects', target: '_self' },
   { href: '/contacts', label: 'contacts', target: '_self' },
-]
+];
 ---
 
 <header
@@ -49,6 +51,7 @@ const coreLinks = [
     <div class="flex justify-end items-stretch gap-2">
       <!-- Mode and Theme -->
       <Lightswitch />
+      {THEME_PICKER && <ThemeSwitch client:load defaultTheme={DEFAULT_THEME} />}
       <!-- Divider -->
       <span class="border-r border-surface-200-800"></span>
       <!-- Social -->

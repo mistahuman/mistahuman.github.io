@@ -1,20 +1,30 @@
 <script lang="ts">
-  import { Accordion } from '@skeletonlabs/skeleton-svelte'
+  import { Accordion } from '@skeletonlabs/skeleton-svelte';
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
   // Icons
-  import Briefcase from '@lucide/svelte/icons/briefcase'
-  import Calendar from '@lucide/svelte/icons/calendar'
-  import MapPin from '@lucide/svelte/icons/map-pin'
-  import Laptop from '@lucide/svelte/icons/laptop'
-  let value = $state(['freelancer'])
+  import Briefcase from '@lucide/svelte/icons/briefcase';
+  import Calendar from '@lucide/svelte/icons/calendar';
+  import MapPin from '@lucide/svelte/icons/map-pin';
+  import Laptop from '@lucide/svelte/icons/laptop';
+  let value = $state(['freelancer']);
 </script>
 
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
   <!-- Freelance -->
   <Accordion.Item value="freelancer">
-    {#snippet lead()}<Laptop size={22} />{/snippet}
-    {#snippet control()}Freelancer{/snippet}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <Laptop size={22} />
+      <span>Freelancer</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
 
-    {#snippet panel()}
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-3 space-y-3">
         <header class="space-y-1">
           <h3 class="text-base font-semibold text-primary">
@@ -38,16 +48,20 @@
           <ul class="list-disc pl-5 space-y-3">
             <li>
               <strong>Cloud Service Orchestration Platform (IPCEI-CIS)</strong>
-              <p class="text-xs text-surface-500 dark:text-surface-400 flex items-center gap-1 mt-0.5">
+              <p
+                class="text-xs text-surface-500 dark:text-surface-400 flex items-center gap-1 mt-0.5"
+              >
                 <Calendar size={14} /> Oct 2025 – Present
               </p>
               <p>
-                Multi-tenant platform managing the lifecycle of cloud and edge services, built on
-                TM Forum Open API standards within the European IPCEI-CIS programme.
+                Multi-tenant platform managing the lifecycle of cloud and edge services, built on TM
+                Forum Open API standards within the European IPCEI-CIS programme.
               </p>
               <ul class="list-disc pl-5 space-y-1 mt-1">
                 <li><strong>Go backend services</strong> with a multi-tenant ownership model.</li>
-                <li><strong>Kubernetes operators</strong> with custom CRDs for orders and resources.</li>
+                <li>
+                  <strong>Kubernetes operators</strong> with custom CRDs for orders and resources.
+                </li>
                 <li><strong>Vue 3 console</strong> and its end-to-end test suite.</li>
               </ul>
               <div class="flex flex-wrap gap-1 mt-1">
@@ -62,15 +76,24 @@
           </ul>
         </div>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
 
   <!-- NIER -->
   <Accordion.Item value="nier">
-    {#snippet lead()}<Briefcase size={22} />{/snippet}
-    {#snippet control()}NIER Ingegneria S.p.A. – Società Benefit{/snippet}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <Briefcase size={22} />
+      <span>NIER Ingegneria S.p.A. – Società Benefit</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
 
-    {#snippet panel()}
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-3 space-y-3">
         <header class="space-y-1">
           <h3 class="text-base font-semibold text-primary">Software Engineer</h3>
@@ -153,6 +176,6 @@
           </ul>
         </div>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
 </Accordion>
