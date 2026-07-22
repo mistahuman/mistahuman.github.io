@@ -30,27 +30,27 @@
         </p>
         <ul class="list list-inside mt-2 space-y-2">
           <li>
-            <span class="badge preset-filled-primary-500">SvelteKit</span>
-            <span class="badge preset-filled-primary-500">Astro</span>
-            <span class="badge preset-filled-primary-500">Skeleton UI Toolkit</span>
-            <span class="badge preset-filled-primary-500">Vue.js</span>
+            <span class="chip preset-filled-primary-500">SvelteKit</span>
+            <span class="chip preset-filled-primary-500">Astro</span>
+            <span class="chip preset-filled-primary-500">Skeleton UI Toolkit</span>
+            <span class="chip preset-filled-primary-500">Vue.js</span>
           </li>
           <li>
-            <span class="badge preset-filled-secondary-500">C</span>
-            <span class="badge preset-filled-secondary-500">Python</span>
-            <span class="badge preset-filled-secondary-500">Rust</span>
-            <span class="badge preset-filled-secondary-500">Go</span>
+            <span class="chip preset-filled-secondary-500">C</span>
+            <span class="chip preset-filled-secondary-500">Python</span>
+            <span class="chip preset-filled-secondary-500">Rust</span>
+            <span class="chip preset-filled-secondary-500">Go</span>
           </li>
           <li>
-            <span class="badge preset-filled-tertiary-500">MongoDB</span>
-            <span class="badge preset-filled-tertiary-500">Docker</span>
-            <span class="badge preset-filled-tertiary-500">Kubernetes</span>
-            <span class="badge preset-filled-tertiary-500">Helm</span>
-            <span class="badge preset-filled-tertiary-500">CI/CD</span>
-            <span class="badge preset-filled-tertiary-500">Linux</span>
+            <span class="chip preset-filled-tertiary-500">MongoDB</span>
+            <span class="chip preset-filled-tertiary-500">Docker</span>
+            <span class="chip preset-filled-tertiary-500">Kubernetes</span>
+            <span class="chip preset-filled-tertiary-500">Helm</span>
+            <span class="chip preset-filled-tertiary-500">CI/CD</span>
+            <span class="chip preset-filled-tertiary-500">Linux</span>
           </li>
           <li>
-            <span class="badge preset-filled-success-500">LaTeX</span>
+            <span class="chip preset-filled-success-500">LaTeX</span>
           </li>
         </ul>
       </div>
@@ -78,21 +78,21 @@
         </p>
         <ul class="list list-inside mt-2 space-y-2">
           <li>
-            <span class="badge preset-filled-success-500">Problem-Solving</span>
-            <span class="badge preset-filled-success-500">Logical Thinking</span>
-            <!-- <span class="badge preset-filled-success-500">Attention to Detail</span> -->
+            <span class="chip preset-filled-success-500">Problem-Solving</span>
+            <span class="chip preset-filled-success-500">Logical Thinking</span>
+            <!-- <span class="chip preset-filled-success-500">Attention to Detail</span> -->
           </li>
           <li>
-            <!-- <span class="badge preset-filled-warning-500">Effective Communication</span> -->
-            <span class="badge preset-filled-warning-500">Independence & Self-Management</span>
-            <!-- <span class="badge preset-filled-warning-500">Time Management</span> -->
-            <!-- <span class="badge preset-filled-warning-500">Giving & Receiving Feedback</span> -->
+            <!-- <span class="chip preset-filled-warning-500">Effective Communication</span> -->
+            <span class="chip preset-filled-warning-500">Independence & Self-Management</span>
+            <!-- <span class="chip preset-filled-warning-500">Time Management</span> -->
+            <!-- <span class="chip preset-filled-warning-500">Giving & Receiving Feedback</span> -->
           </li>
           <li>
-            <span class="badge preset-filled-error-500">Research & Self-Teaching</span>
-            <!-- <span class="badge preset-filled-error-500">Critical Thinking</span> -->
-            <span class="badge preset-filled-error-500">Proactiveness</span>
-            <!-- <span class="badge preset-filled-error-500">Curiosity & Willingness to Learn </span> -->
+            <span class="chip preset-filled-error-500">Research & Self-Teaching</span>
+            <!-- <span class="chip preset-filled-error-500">Critical Thinking</span> -->
+            <span class="chip preset-filled-error-500">Proactiveness</span>
+            <!-- <span class="chip preset-filled-error-500">Curiosity & Willingness to Learn </span> -->
           </li>
         </ul>
       </div>

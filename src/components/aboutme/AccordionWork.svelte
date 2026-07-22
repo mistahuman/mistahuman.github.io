@@ -65,12 +65,12 @@
                 <li><strong>Vue 3 console</strong> and its end-to-end test suite.</li>
               </ul>
               <div class="flex flex-wrap gap-1 mt-1">
-                <span class="badge preset-outlined-secondary-500">Go</span>
-                <span class="badge preset-outlined-secondary-500">Kubernetes</span>
-                <span class="badge preset-outlined-secondary-500">TM Forum Open API</span>
-                <span class="badge preset-outlined-secondary-500">Vue.js</span>
-                <span class="badge preset-outlined-secondary-500">MongoDB</span>
-                <span class="badge preset-outlined-secondary-500">Helm</span>
+                <span class="chip preset-outlined-secondary-500">Go</span>
+                <span class="chip preset-outlined-secondary-500">Kubernetes</span>
+                <span class="chip preset-outlined-secondary-500">TM Forum Open API</span>
+                <span class="chip preset-outlined-secondary-500">Vue.js</span>
+                <span class="chip preset-outlined-secondary-500">MongoDB</span>
+                <span class="chip preset-outlined-secondary-500">Helm</span>
               </div>
             </li>
           </ul>
@@ -142,11 +142,11 @@
                 candidate selection and skill search.
               </p>
               <div class="flex flex-wrap gap-1 mt-1">
-                <span class="badge preset-outlined-secondary-500">Docker</span>
-                <span class="badge preset-outlined-secondary-500">Flask</span>
-                <span class="badge preset-outlined-secondary-500">MongoDB</span>
-                <span class="badge preset-outlined-secondary-500">Vue.js</span>
-                <span class="badge preset-outlined-secondary-500">Bootstrap</span>
+                <span class="chip preset-outlined-secondary-500">Docker</span>
+                <span class="chip preset-outlined-secondary-500">Flask</span>
+                <span class="chip preset-outlined-secondary-500">MongoDB</span>
+                <span class="chip preset-outlined-secondary-500">Vue.js</span>
+                <span class="chip preset-outlined-secondary-500">Bootstrap</span>
               </div>
             </li>
 
@@ -165,12 +165,12 @@
                 with advanced tools for protocol manipulation.
               </p>
               <div class="flex flex-wrap gap-1 mt-1">
-                <span class="badge preset-outlined-secondary-500">C</span>
-                <span class="badge preset-outlined-secondary-500">Cython</span>
-                <span class="badge preset-outlined-secondary-500">gRPC</span>
-                <span class="badge preset-outlined-secondary-500">Flask</span>
-                <span class="badge preset-outlined-secondary-500">Vue.js</span>
-                <span class="badge preset-outlined-secondary-500">Vuetify</span>
+                <span class="chip preset-outlined-secondary-500">C</span>
+                <span class="chip preset-outlined-secondary-500">Cython</span>
+                <span class="chip preset-outlined-secondary-500">gRPC</span>
+                <span class="chip preset-outlined-secondary-500">Flask</span>
+                <span class="chip preset-outlined-secondary-500">Vue.js</span>
+                <span class="chip preset-outlined-secondary-500">Vuetify</span>
               </div>
             </li>
           </ul>
