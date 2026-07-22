@@ -55,6 +55,7 @@
             <a
               href="https://github.com/mistahuman/marcolanconelli-thesis"
               target="_blank"
+              rel="noopener noreferrer"
               class="anchor"
             >
               mistahuman/marcolanconelli-thesis
@@ -66,6 +67,7 @@
             <a
               href="https://github.com/mistahuman/nuclear-engineer-homeworks"
               target="_blank"
+              rel="noopener noreferrer"
               class="anchor"
             >
               mistahuman/nuclear-engineer-homeworks

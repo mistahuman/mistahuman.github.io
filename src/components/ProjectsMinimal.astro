@@ -6,9 +6,7 @@ import { projects } from '../data/projects';
 const featuredProjects = projects.filter((p) => p.featured);
 ---
 
-<section class="space-y-6">
-  <h2 class="h3 text-center underline">Featured projects</h2>
-
+<div class="space-y-6 w-fit mx-auto">
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {
       featuredProjects.map((project) => (
@@ -16,13 +14,19 @@ const featuredProjects = projects.filter((p) => p.featured);
           <h3 class="h4 font-semibold">{project.title}</h3>
           <p class="text-surface-600-400">{project.description}</p>
           <div class="flex flex-wrap gap-3 pt-2">
-            <a href={project.liveUrl} target="_blank" class="btn btn-sm preset-filled-primary-500">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-sm preset-filled-primary-500"
+            >
               <ExternalLink class="w-4 h-4" />
               <span>live demo</span>
             </a>
             <a
               href={project.githubUrl}
               target="_blank"
+              rel="noopener noreferrer"
               class="btn btn-sm preset-outlined-primary-500"
             >
               <Github class="w-4 h-4" />
@@ -40,4 +44,4 @@ const featuredProjects = projects.filter((p) => p.featured);
       <IconChevron className="size-4" />
     </a>
   </div>
-</section>
+</div>
