@@ -1,9 +1,9 @@
 ---
-import { ExternalLink, Github } from '@lucide/svelte'
-import { ChevronRight as IconChevron } from '@lucide/svelte'
-import { projects } from '../data/projects'
+import { ExternalLink, Github } from '@lucide/svelte';
+import { ChevronRight as IconChevron } from '@lucide/svelte';
+import { projects } from '../data/projects';
 
-const featuredProjects = projects.filter((p) => p.featured)
+const featuredProjects = projects.filter((p) => p.featured);
 ---
 
 <section class="space-y-6">
@@ -12,9 +12,7 @@ const featuredProjects = projects.filter((p) => p.featured)
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
     {
       featuredProjects.map((project) => (
-        <div
-          class="card preset-filled-surface-50-950 p-5 space-y-4 transition-shadow hover:shadow-xl border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w-md overflow-hidden"
-        >
+        <div class="card preset-filled-surface-50-950 p-5 space-y-4 transition-shadow hover:shadow-xl border-[1px] border-surface-200-800 card-hover divide-surface-200-800 block max-w-md overflow-hidden">
           <h3 class="h4 font-semibold">{project.title}</h3>
           <p class="text-surface-600-400">{project.description}</p>
           <div class="flex flex-wrap gap-3 pt-2">
