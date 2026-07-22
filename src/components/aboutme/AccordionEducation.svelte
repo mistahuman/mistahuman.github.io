@@ -1,28 +1,38 @@
 <script lang="ts">
-  import { Accordion } from '@skeletonlabs/skeleton-svelte'
+  import { Accordion } from '@skeletonlabs/skeleton-svelte';
+  import ChevronDown from '@lucide/svelte/icons/chevron-down';
   // Icons
-  import GraduationCap from '@lucide/svelte/icons/graduation-cap'
-  import School from '@lucide/svelte/icons/school'
-  import Newspaper from '@lucide/svelte/icons/newspaper'
-  import Calendar from '@lucide/svelte/icons/calendar'
-  import MapPin from '@lucide/svelte/icons/map-pin'
-  import Goal from '@lucide/svelte/icons/goal'
+  import GraduationCap from '@lucide/svelte/icons/graduation-cap';
+  import School from '@lucide/svelte/icons/school';
+  import Newspaper from '@lucide/svelte/icons/newspaper';
+  import Calendar from '@lucide/svelte/icons/calendar';
+  import MapPin from '@lucide/svelte/icons/map-pin';
+  import Goal from '@lucide/svelte/icons/goal';
 
-  let value = $state([''])
+  let value = $state(['']);
 </script>
 
 <Accordion {value} onValueChange={(e) => (value = e.value)} collapsible>
   <Accordion.Item value="master">
     <!-- Control -->
-    {#snippet lead()}<GraduationCap size={24} />{/snippet}
-    {#snippet control()}Master’s Degree in Energy and Nuclear Engineering{/snippet}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <GraduationCap size={24} />
+      <span>Master’s Degree in Energy and Nuclear Engineering</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
     <!-- Panel -->
-    {#snippet panel()}
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-1">
         <h3 class="text-base font-semibold text-primary">
           Alma Mater Studiorum - University of Bologna
         </h3>
-          <p class="text-xs flex flex-wrap items-center gap-3 text-surface-600 dark:text-surface-400">
+        <p class="text-xs flex flex-wrap items-center gap-3 text-surface-600 dark:text-surface-400">
           <Calendar size={18} /> Sep 2016 - Dec 2019
           <MapPin size={18} /> Bologna
           <Goal size={18} /> 110L/110L
@@ -37,32 +47,51 @@
           <p>
             <i>Description:</i> The nuclear reactor integrated into the numerical platform is based on
             the ALFRED project, which aims to demonstrate the feasibility of lead-cooled fast reactors.
-            The numerical platform enables a comprehensive simulation of reactor physics through the
-            implementation of the Dragon/Donjon neutronic code and the FEMuS thermohydraulic code.
+            The numerical platform enables a comprehensive simulation of reactor physics through the implementation
+            of the Dragon/Donjon neutronic code and the FEMuS thermohydraulic code.
           </p>
           <p>
             <i>Repository:</i>
-            <a href="https://github.com/mistahuman/marcolanconelli-thesis" target="_blank" class="anchor">
+            <a
+              href="https://github.com/mistahuman/marcolanconelli-thesis"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="anchor"
+            >
               mistahuman/marcolanconelli-thesis
             </a>
             (thesis, slides & conference paper).
           </p>
           <p>
             <i>Coursework:</i>
-            <a href="https://github.com/mistahuman/nuclear-engineer-homeworks" target="_blank" class="anchor">
+            <a
+              href="https://github.com/mistahuman/nuclear-engineer-homeworks"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="anchor"
+            >
               mistahuman/nuclear-engineer-homeworks
             </a>
             (reports and projects from the M.Sc. programme).
           </p>
         </div>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
   <hr class="hr" />
   <Accordion.Item value="publication">
-    {#snippet lead()}<Newspaper size={24} />{/snippet}
-    {#snippet control()}Conference Proceedings{/snippet}
-    {#snippet panel()}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <Newspaper size={24} />
+      <span>Conference Proceedings</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-1">
         <h3 class="text-base font-semibold text-primary">
           Technical Meeting on the Benefits and Challenges of Fast Reactors of the SMR Type
@@ -77,13 +106,22 @@
           <p><i>Authors:</i> Marco Lanconelli, Sandro Manservisi, Marco Sumini</p>
         </div>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
   <hr class="hr" />
   <Accordion.Item value="bachelor">
-    {#snippet lead()}<GraduationCap size={24} />{/snippet}
-    {#snippet control()}Bachelor’s Degree in Energy Engineering{/snippet}
-    {#snippet panel()}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <GraduationCap size={24} />
+      <span>Bachelor’s Degree in Energy Engineering</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-1">
         <h3 class="text-base font-semibold text-primary">
           Alma Mater Studiorum - University of Bologna
@@ -94,13 +132,22 @@
           <Goal size={18} /> 95/110L
         </p>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
   <hr class="hr" />
   <Accordion.Item value="highschool">
-    {#snippet lead()}<School size={24} />{/snippet}
-    {#snippet control()}High School Diploma in Science and Technology{/snippet}
-    {#snippet panel()}
+    <Accordion.ItemTrigger
+      class="w-full flex items-center gap-4 px-4 py-3 rounded-base text-left cursor-pointer hover:preset-tonal"
+    >
+      <School size={24} />
+      <span>High School Diploma in Science and Technology</span>
+      <Accordion.ItemIndicator
+        class="ml-auto transition-transform duration-200 data-[state=open]:rotate-180"
+      >
+        <ChevronDown size={20} />
+      </Accordion.ItemIndicator>
+    </Accordion.ItemTrigger>
+    <Accordion.ItemContent class="px-4 pb-3">
       <div class="p-1">
         <h3 class="text-base font-semibold text-primary">
           G. R. Curbastro Scientific and Technological High School
@@ -111,6 +158,6 @@
           <Goal size={18} /> 80/100
         </p>
       </div>
-    {/snippet}
+    </Accordion.ItemContent>
   </Accordion.Item>
 </Accordion>

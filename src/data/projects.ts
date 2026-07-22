@@ -1,17 +1,17 @@
-export type ProjectStatus = 'completed' | 'inProgress' | 'planned'
-export type ProjectCategory = 'web' | 'academic' | 'template'
+export type ProjectStatus = 'completed' | 'inProgress' | 'planned';
+export type ProjectCategory = 'web' | 'academic' | 'template';
 
 export type Project = {
-  title: string
-  description: string
-  liveUrl?: string
-  githubUrl: string
-  tech: string[]
-  date: string
-  status: ProjectStatus
-  featured: boolean
-  category?: ProjectCategory
-}
+  title: string;
+  description: string;
+  liveUrl?: string;
+  githubUrl: string;
+  tech: string[];
+  date: string;
+  status: ProjectStatus;
+  featured: boolean;
+  category?: ProjectCategory;
+};
 
 export const projects: Project[] = [
   {
@@ -129,8 +129,9 @@ export const projects: Project[] = [
   },
   // Academic
   {
-    title: 'ALFRED LFR – Master\'s Thesis',
-    description: 'modelling of a Lead-cooled Fast Reactor with neutronics–thermohydraulics coupling on the FEMuS multi-physics platform',
+    title: "ALFRED LFR – Master's Thesis",
+    description:
+      'modelling of a Lead-cooled Fast Reactor with neutronics–thermohydraulics coupling on the FEMuS multi-physics platform',
     githubUrl: 'https://github.com/mistahuman/marcolanconelli-thesis',
     tech: ['LaTeX', 'Dragon5/Donjon5', 'FEMuS'],
     date: '2019',
@@ -140,7 +141,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Nuclear Engineering Homeworks',
-    description: 'collection of reports and projects from the M.Sc. in Energy Engineering (Nuclear track) at UniBO',
+    description:
+      'collection of reports and projects from the M.Sc. in Energy Engineering (Nuclear track) at UniBO',
     githubUrl: 'https://github.com/mistahuman/nuclear-engineer-homeworks',
     tech: ['LaTeX', 'MATLAB', 'Python'],
     date: '2016–2019',
@@ -148,4 +150,4 @@ export const projects: Project[] = [
     featured: false,
     category: 'academic',
   },
-]
+];

@@ -1,9 +1,11 @@
 ---
-import { ChevronRight as IconChevron } from '@lucide/svelte'
-import Logo from '@components/generic/Logo.astro'
+import { ChevronRight as IconChevron } from '@lucide/svelte';
+import Logo from '@components/generic/Logo.astro';
 ---
 
-<div class="grid grid-cols-1 xl:grid-cols-[256px_800px] gap-20">
+<div
+  class="grid grid-cols-1 xl:grid-cols-[256px_minmax(0,800px)] gap-10 xl:gap-20 justify-center max-w-5xl mx-auto"
+>
   <!-- Mascot -->
   <div class="flex justify-center items-center">
     <div class="relative size-48 md:size-64 aspect-square justify-center items-center flex">
@@ -15,9 +17,7 @@ import Logo from '@components/generic/Logo.astro'
   <!-- Hero Text -->
   <div class="self-center space-y-4">
     <!-- Text -->
-    <h1 class="heading-font-family text-3xl md:text-4xl font-bold xl:text-balance">
-      mistahuman's Github Pages
-    </h1>
+    <h1 class="h1 text-3xl md:text-4xl xl:text-balance">mistahuman's Github Pages</h1>
     <p class="xl:text-balance">
       Welcome! I’m <strong class="text-primary-900-100">Marco Lanconelli</strong>, a <u
         >full stack software engineer</u
@@ -32,7 +32,7 @@ import Logo from '@components/generic/Logo.astro'
         <IconChevron className="size-4" />
       </a>
       <a href="/projects" class="btn preset-outlined-secondary-500">
-        <span>look out my projects</span>
+        <span>check out my projects</span>
         <IconChevron className="size-4" />
       </a>
     </nav>

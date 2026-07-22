@@ -1,10 +1,10 @@
 ---
-import AccordionEducation from '@components/aboutme/AccordionEducation.svelte'
-import AccordionWork from '@components/aboutme/AccordionWork.svelte'
-import AccordionSkills from '@components/aboutme/AccordionSkills.svelte'
-import MyHero from '@components/MyHero.astro'
-import Aboutme from '@components/aboutme/Aboutme.astro'
-import Card from '@components/generic/Card.astro'
+import AccordionEducation from '@components/aboutme/AccordionEducation.svelte';
+import AccordionWork from '@components/aboutme/AccordionWork.svelte';
+import AccordionSkills from '@components/aboutme/AccordionSkills.svelte';
+import MyHero from '@components/MyHero.astro';
+import Aboutme from '@components/aboutme/Aboutme.astro';
+import Card from '@components/generic/Card.astro';
 ---
 
 <div class="p-4 justify-items-center mb-5">
@@ -15,12 +15,12 @@ import Card from '@components/generic/Card.astro'
     <Aboutme />
   </Card>
   <Card title="Work">
-    <AccordionWork client:load="svelte" />
+    <AccordionWork client:load />
   </Card>
   <Card title="Education">
-    <AccordionEducation client:load="svelte" />
+    <AccordionEducation client:load />
   </Card>
   <Card title="Skills">
-    <AccordionSkills client:load="svelte" />
+    <AccordionSkills client:load />
   </Card>
 </div>

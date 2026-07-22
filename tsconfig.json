@@ -5,6 +5,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
+      "@config": ["src/config.ts"],
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
       "@styles/*": ["src/styles/*"],
