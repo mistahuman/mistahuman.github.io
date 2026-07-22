@@ -4,32 +4,15 @@
 /* Optional */
 /* @import '@skeletonlabs/skeleton/optional/presets'; */
 /* Themes */
-@import '@skeletonlabs/skeleton/themes/catppuccin';
-@import '@skeletonlabs/skeleton/themes/cerberus';
-@import '@skeletonlabs/skeleton/themes/concord';
-@import '@skeletonlabs/skeleton/themes/crimson';
-@import '@skeletonlabs/skeleton/themes/dracula';
-@import '@skeletonlabs/skeleton/themes/fennec';
-@import '@skeletonlabs/skeleton/themes/hamlindigo';
-@import '@skeletonlabs/skeleton/themes/legacy';
-@import '@skeletonlabs/skeleton/themes/mint';
-@import '@skeletonlabs/skeleton/themes/modern';
-@import '@skeletonlabs/skeleton/themes/mona';
-@import '@skeletonlabs/skeleton/themes/nosh';
-@import '@skeletonlabs/skeleton/themes/nouveau';
-@import '@skeletonlabs/skeleton/themes/pine';
-@import '@skeletonlabs/skeleton/themes/reign';
-@import '@skeletonlabs/skeleton/themes/rocket';
-@import '@skeletonlabs/skeleton/themes/rose';
-@import '@skeletonlabs/skeleton/themes/rosepine';
-@import '@skeletonlabs/skeleton/themes/sahara';
-@import '@skeletonlabs/skeleton/themes/seafoam';
-@import '@skeletonlabs/skeleton/themes/terminus';
-@import '@skeletonlabs/skeleton/themes/vintage';
-@import '@skeletonlabs/skeleton/themes/vox';
-@import '@skeletonlabs/skeleton/themes/wintry';
+/* Only our own themes ship: the stock Skeleton ones cost ~11 KB each in the
+   bundle and the theme picker is off (see THEME_PICKER in src/config.ts).
+   To use one, import it here and add it to ThemeSwitch.svelte and to the
+   background-gradient selector list below. */
+/* @import '@skeletonlabs/skeleton/themes/cerberus'; */
 
 @import './mistahuman-theme.css';
+@import './terracotta-theme.css';
+@import './phosphor-theme.css';
 
 @source '../../node_modules/@skeletonlabs/skeleton-svelte/dist';
 
@@ -70,29 +53,8 @@ html {
 /* Inner Page Gradient */
 
 [data-theme='mistahuman-theme'],
-[data-theme='concord'],
-[data-theme='reign'],
-[data-theme='terminus'],
-[data-theme='vox'],
-[data-theme='catppuccin'],
-[data-theme='cerberus'],
-[data-theme='crimson'],
-[data-theme='dracula'],
-[data-theme='fennec'],
-[data-theme='hamlindigo'],
-[data-theme='legacy'],
-[data-theme='mint'],
-[data-theme='modern'],
-[data-theme='nouveau'],
-[data-theme='mona'],
-[data-theme='nosh'],
-[data-theme='pine'],
-[data-theme='rose'],
-[data-theme='rosepine'],
-[data-theme='sahara'],
-[data-theme='seafoam'],
-[data-theme='vintage'],
-[data-theme='wintry'] {
+[data-theme='terracotta-theme'],
+[data-theme='phosphor-theme'] {
   & body {
     /* OPTIONAL: Background Mesh Gradient */
     /* https://next.skeleton.dev/docs/design/themes#backgrounds */

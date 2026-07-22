@@ -6,31 +6,9 @@
   let { defaultTheme = 'mistahuman-theme' }: { defaultTheme?: string } = $props();
 
   const themes = [
-    { id: 'mistahuman-theme', label: 'Mistahuman', emoji: '🧑‍💻' },
-    { id: 'catppuccin', label: 'Catppuccin', emoji: '🐈' },
-    { id: 'cerberus', label: 'Cerberus', emoji: '🐺' },
-    { id: 'concord', label: 'Concord', emoji: '🤖' },
-    { id: 'crimson', label: 'Crimson', emoji: '🔴' },
-    { id: 'dracula', label: 'Dracula', emoji: '🧛' },
-    { id: 'fennec', label: 'Fennec', emoji: '🦊' },
-    { id: 'hamlindigo', label: 'Hamlindigo', emoji: '👔' },
-    { id: 'legacy', label: 'Legacy', emoji: '📜' },
-    { id: 'mint', label: 'Mint', emoji: '🌿' },
-    { id: 'modern', label: 'Modern', emoji: '✨' },
-    { id: 'mona', label: 'Mona', emoji: '🎨' },
-    { id: 'nosh', label: 'Nosh', emoji: '🍜' },
-    { id: 'nouveau', label: 'Nouveau', emoji: '🌸' },
-    { id: 'pine', label: 'Pine', emoji: '🌲' },
-    { id: 'reign', label: 'Reign', emoji: '👑' },
-    { id: 'rocket', label: 'Rocket', emoji: '🚀' },
-    { id: 'rose', label: 'Rose', emoji: '🌹' },
-    { id: 'rosepine', label: 'Rosé Pine', emoji: '🪻' },
-    { id: 'sahara', label: 'Sahara', emoji: '🏜️' },
-    { id: 'seafoam', label: 'Seafoam', emoji: '🌊' },
-    { id: 'terminus', label: 'Terminus', emoji: '💻' },
-    { id: 'vintage', label: 'Vintage', emoji: '📻' },
-    { id: 'vox', label: 'Vox', emoji: '🎙️' },
-    { id: 'wintry', label: 'Wintry', emoji: '❄️' },
+    { id: 'mistahuman-theme', label: 'Mistahuman', emoji: '🕹️' },
+    { id: 'terracotta-theme', label: 'Terracotta', emoji: '🏺' },
+    { id: 'phosphor-theme', label: 'Phosphor', emoji: '📟' },
   ];
 
   // The island renders on the server first, so read the live theme only once hydrated.
