@@ -1,25 +1,20 @@
-# mistahuman's Github Pages
+# mistahuman.github.io
 
-A responsive github page built with [Astro](https://astro.build/) and [Skeleton](https://www.skeleton.dev/), an adaptive design system powered by Tailwind CSS.
+My personal website.
 
-## 🚀 Live Demo
+**Live:** https://mistahuman.github.io/
 
-[View the website](https://mistahuman.github.io/)
+## Stack
 
-## 🧰 Tech Stack
+Astro · Svelte · Skeleton · Tailwind
 
-- **Astro** – Static site builder
-- **Skeleton** – UI components and utilities based on Tailwind CSS
-- **Svelte** – Framework used in Skeleton components
-- **Tailwind CSS** – Utility-first CSS framework
-
-## 📦 Installation
-
-To run the project locally:
+## Run
 
 ```bash
-git clone https://github.com/mistahuman/mistahuman.github.io.git
-cd mistahuman.github.io
 npm install
 npm run dev
 ```
+
+## License
+
+MIT
