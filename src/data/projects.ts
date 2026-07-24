@@ -1,5 +1,16 @@
 export type ProjectStatus = 'completed' | 'inProgress' | 'planned';
 export type ProjectCategory = 'web' | 'academic' | 'template';
+// Lifecycle stage shown as a badge: where the project is, not how maintained it is.
+// live = deployed and usable · wip = built but not public yet · dormant = built, now on ice.
+// Left undefined (no badge) where it doesn't apply, e.g. templates and academic repos.
+export type ProjectLifecycle = 'live' | 'wip' | 'dormant';
+
+// Single source of truth for the lifecycle badge, shared by every card.
+export const lifecycleMeta: Record<ProjectLifecycle, { label: string; class: string }> = {
+  live: { label: 'live', class: 'preset-filled-success-500' },
+  wip: { label: 'wip', class: 'preset-filled-warning-500' },
+  dormant: { label: 'dormant', class: 'preset-filled-surface-500' },
+};
 
 export type Project = {
   title: string;
@@ -11,6 +22,7 @@ export type Project = {
   status: ProjectStatus;
   featured: boolean;
   category?: ProjectCategory;
+  lifecycle?: ProjectLifecycle;
 };
 
 export const projects: Project[] = [
@@ -23,6 +35,7 @@ export const projects: Project[] = [
     date: '2026',
     status: 'completed',
     featured: true,
+    lifecycle: 'live',
   },
   {
     title: 'Mistatools',
@@ -33,6 +46,7 @@ export const projects: Project[] = [
     date: '2026',
     status: 'completed',
     featured: true,
+    lifecycle: 'live',
   },
   {
     title: 'Portfolio – Davide Sigillo',
@@ -43,6 +57,7 @@ export const projects: Project[] = [
     date: '2025',
     status: 'completed',
     featured: false,
+    lifecycle: 'live',
   },
   {
     title: 'Landing page – Andrea Faccani',
@@ -53,6 +68,7 @@ export const projects: Project[] = [
     date: '2025',
     status: 'completed',
     featured: false,
+    lifecycle: 'live',
   },
   {
     title: 'Forge String',
@@ -63,6 +79,7 @@ export const projects: Project[] = [
     date: '2026',
     status: 'completed',
     featured: true,
+    lifecycle: 'live',
   },
   {
     title: 'Cashflowr',
@@ -70,17 +87,30 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/mistahuman/cashflowr',
     tech: ['FastAPI', 'MongoDB', 'SvelteKit', 'Docker'],
     date: '2026',
-    status: 'completed',
+    status: 'inProgress',
     featured: true,
+    lifecycle: 'wip',
   },
   {
     title: 'Svelte Kitty Translate',
     description: 'translation front-end with a shared UI-kit playground',
+    liveUrl: 'https://mistahuman.github.io/svelte-kitty-translate/',
     githubUrl: 'https://github.com/mistahuman/svelte-kitty-translate',
     tech: ['SvelteKit', 'Svelte', 'Skeleton UI', 'TypeScript'],
     date: '2026',
     status: 'completed',
     featured: false,
+    lifecycle: 'live',
+  },
+  {
+    title: 'DeepHours',
+    description: 'working-hours tracker: log what you worked on and keep the week in order',
+    githubUrl: 'https://github.com/mistahuman/deephours',
+    tech: ['FastAPI', 'MongoDB', 'Svelte', 'Docker'],
+    date: '2025',
+    status: 'completed',
+    featured: false,
+    lifecycle: 'dormant',
   },
   // Templates
   {
@@ -92,6 +122,17 @@ export const projects: Project[] = [
     date: '2026',
     status: 'completed',
     featured: true,
+    category: 'template',
+  },
+  {
+    title: 'Astro Illustrator Portfolio Starter',
+    description: 'starter for a visual, image-heavy portfolio in plain Astro',
+    liveUrl: 'https://mistahuman.github.io/astro-illustrator-portfolio-starter/',
+    githubUrl: 'https://github.com/mistahuman/astro-illustrator-portfolio-starter',
+    tech: ['Astro'],
+    date: '2026',
+    status: 'completed',
+    featured: false,
     category: 'template',
   },
   {
@@ -137,7 +178,8 @@ export const projects: Project[] = [
   },
   {
     title: 'Fullstack Webapp Starter',
-    description: 'Docker Compose monorepo wiring backend, SvelteKit and MongoDB via Nginx',
+    description:
+      'Docker Compose shell that composes a backend starter, the SvelteKit UI and MongoDB behind Nginx',
     githubUrl: 'https://github.com/mistahuman/fullstack-webapp-starter',
     tech: ['Docker', 'Nginx', 'SvelteKit', 'MongoDB'],
     date: '2026',
