@@ -11,5 +11,5 @@ export type ProjectLifecycle = NonNullable<Project['lifecycle']>;
 export const lifecycleMeta: Record<ProjectLifecycle, { label: string; class: string }> = {
   live: { label: 'live', class: 'preset-filled-success-500' },
   wip: { label: 'wip', class: 'preset-filled-warning-500' },
-  dormant: { label: 'dormant', class: 'preset-filled-surface-500' },
+  outdated: { label: 'outdated', class: 'preset-filled-surface-500' },
 };

@@ -16,7 +16,7 @@ const projects = defineCollection({
     status: z.enum(['completed', 'inProgress', 'planned']),
     featured: z.boolean(),
     category: z.enum(['web', 'academic', 'template']).optional(),
-    lifecycle: z.enum(['live', 'wip', 'dormant']).optional(),
+    lifecycle: z.enum(['live', 'wip', 'outdated']).optional(),
   }),
 });
 

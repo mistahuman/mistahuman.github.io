@@ -7,7 +7,7 @@ tech: ["FastAPI", "MongoDB", "Svelte", "Docker"]
 date: "2025"
 status: "completed"
 featured: false
-lifecycle: "dormant"
+lifecycle: "outdated"
 ---
 
 A working-hours tracker: log what you worked on and keep the week in order. Fullstack
