@@ -1,8 +1,12 @@
 ---
 // ProjectsFull.astro
+import { getCollection } from 'astro:content';
 import { Github } from '@lucide/svelte';
 import ProjectCard from '@components/generic/ProjectCard.astro';
-import { projects } from '../data/projects';
+
+const projects = (await getCollection('projects'))
+  .map((entry) => entry.data)
+  .sort((a, b) => a.order - b.order);
 
 const webProjects = projects.filter((p) => !p.category || p.category === 'web');
 const templateProjects = projects.filter((p) => p.category === 'template');

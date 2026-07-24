@@ -1,0 +1,14 @@
+---
+order: 8
+title: "DeepHours"
+description: "working-hours tracker: log what you worked on and keep the week in order"
+githubUrl: "https://github.com/mistahuman/deephours"
+tech: ["FastAPI", "MongoDB", "Svelte", "Docker"]
+date: "2025"
+status: "completed"
+featured: false
+lifecycle: "dormant"
+---
+
+A working-hours tracker: log what you worked on and keep the week in order. Fullstack
+FastAPI + MongoDB with a Svelte UI — built, and now on ice.
