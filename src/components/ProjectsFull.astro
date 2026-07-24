@@ -17,10 +17,10 @@ const academicProjects = projects.filter((p) => p.category === 'academic');
 
   <!-- App / web projects — the showcase tier -->
   <section class="space-y-6">
-    <div class="text-center space-y-1">
+    <!-- <div class="text-center space-y-1">
       <h2 class="h3"><span class="text-primary-500">//</span> apps</h2>
       <p class="text-sm text-surface-600-400">web apps and tools I've built</p>
-    </div>
+    </div> -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {webProjects.map((project) => <ProjectCard project={project} variant="app" />)}
     </div>
@@ -28,10 +28,10 @@ const academicProjects = projects.filter((p) => p.category === 'academic');
 
   <!-- Templates — compact tier -->
   <section class="space-y-6">
-    <div class="text-center space-y-1">
+    <div class="text-center space-y-2">
       <h2 class="h3"><span class="text-primary-500">//</span> templates</h2>
       <p class="text-sm text-surface-600-400">
-        reusable starters for frontend, backend and fullstack projects
+        reusable my starters for frontend, backend and fullstack projects
       </p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -41,7 +41,7 @@ const academicProjects = projects.filter((p) => p.category === 'academic');
 
   <!-- Academic / research repos — sober centered list -->
   <section class="space-y-4">
-    <div class="text-center space-y-1">
+    <div class="text-center space-y-2">
       <h2 class="h3"><span class="text-primary-500">//</span> academic & research</h2>
       <p class="text-sm text-surface-600-400">
         repos from my Master's in Nuclear and Energy Engineering at UniBO
