@@ -1,5 +1,5 @@
 ---
-order: 10
+order: 11
 title: "Astro Illustrator Portfolio Starter"
 description: "starter for a visual, image-heavy portfolio in plain Astro"
 liveUrl: "https://mistahuman.github.io/astro-illustrator-portfolio-starter/"

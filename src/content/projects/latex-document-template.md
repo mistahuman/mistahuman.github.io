@@ -1,5 +1,5 @@
 ---
-order: 16
+order: 17
 title: "LaTeX Document Template"
 description: "clean LaTeX starter with cover page, styled header/footer, and code highlighting"
 githubUrl: "https://github.com/mistahuman/template-latex"

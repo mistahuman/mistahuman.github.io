@@ -1,5 +1,5 @@
 ---
-order: 9
+order: 10
 title: "Astro Svelte Skeleton Starter"
 description: "starter template for building static pages and portfolios"
 liveUrl: "https://mistahuman.github.io/astro-svelte-skeleton-starter/"

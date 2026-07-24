@@ -1,5 +1,5 @@
 ---
-order: 12
+order: 13
 title: "FastAPI MongoDB Starter"
 description: "minimal REST API backend starter with async Python"
 githubUrl: "https://github.com/mistahuman/fastapi-mongodb-starter"
