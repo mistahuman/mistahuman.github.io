@@ -5,6 +5,13 @@ import AccordionSkills from '@components/aboutme/AccordionSkills.svelte';
 import MyHero from '@components/MyHero.astro';
 import Aboutme from '@components/aboutme/Aboutme.astro';
 import Card from '@components/generic/Card.astro';
+
+// Update status of this mycv page. Bump by hand when you refresh the page's content.
+// Format: YYYY-MM-DD; shown as month/year, parsed from parts to avoid timezone shifts.
+const PAGE_UPDATED = '2026-07-22';
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const [puY, puM] = PAGE_UPDATED.split('-').map(Number);
+const pageUpdatedLabel = `${MONTHS[puM - 1]} ${puY}`;
 ---
 
 <div class="p-4 justify-items-center mb-5">
@@ -24,3 +31,4 @@ import Card from '@components/generic/Card.astro';
     <AccordionSkills client:load />
   </Card>
 </div>
+<p class="text-center text-xs opacity-50 mt-8">last updated · {pageUpdatedLabel}</p>
