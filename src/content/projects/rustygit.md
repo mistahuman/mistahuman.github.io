@@ -1,10 +1,10 @@
 ---
-order: 9
 title: "RustyGit"
 description: "git stats and changelog generation, straight from the terminal"
 githubUrl: "https://github.com/mistahuman/rustygit"
 tech: ["Rust", "clap", "git2"]
-date: "2025"
+date: "2025-02"
+category: "cli"
 status: "completed"
 featured: false
 lifecycle: "outdated"

@@ -1,11 +1,11 @@
 ---
-order: 7
 title: "Svelte Kitty Translate"
 description: "translation front-end with a shared UI-kit playground"
 liveUrl: "https://mistahuman.github.io/svelte-kitty-translate/"
 githubUrl: "https://github.com/mistahuman/svelte-kitty-translate"
 tech: ["SvelteKit", "Svelte", "Skeleton UI", "TypeScript"]
-date: "2026"
+date: "2024-05"
+category: "app"
 status: "completed"
 featured: false
 lifecycle: "live"

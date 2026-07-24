@@ -1,10 +1,10 @@
 ---
-order: 6
 title: "Cashflowr"
 description: "personal finance tracker with monthly entries, planner and annual view"
 githubUrl: "https://github.com/mistahuman/cashflowr"
 tech: ["FastAPI", "MongoDB", "SvelteKit", "Docker"]
-date: "2026"
+date: "2026-06"
+category: "app"
 status: "inProgress"
 featured: true
 lifecycle: "wip"

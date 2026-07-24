@@ -1,6 +1,6 @@
 ---
 import { Github, ExternalLink, Calendar } from '@lucide/svelte';
-import { lifecycleMeta, type Project } from '../../data/projects';
+import { displayDate, lifecycleMeta, type Project } from '../../data/projects';
 
 interface Props {
   project: Project;
@@ -44,7 +44,7 @@ const badge = project.lifecycle ? lifecycleMeta[project.lifecycle] : null;
     <footer class="flex flex-wrap items-center justify-between gap-3 mt-auto pt-1">
       <span class="text-xs text-surface-600-400 flex items-center gap-1">
         <Calendar class="w-3 h-3" />
-        {project.date}
+        {displayDate(project)}
       </span>
       <div class="flex flex-wrap gap-2">
         {

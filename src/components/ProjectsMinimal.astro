@@ -2,11 +2,12 @@
 import { getCollection } from 'astro:content';
 import { ExternalLink, Github } from '@lucide/svelte';
 import { ChevronRight as IconChevron } from '@lucide/svelte';
+import { byDateThenTitle } from '../data/projects';
 
 const featuredProjects = (await getCollection('projects'))
   .map((entry) => entry.data)
   .filter((p) => p.featured)
-  .sort((a, b) => a.order - b.order);
+  .sort(byDateThenTitle);
 ---
 
 <div class="space-y-6 w-fit mx-auto">

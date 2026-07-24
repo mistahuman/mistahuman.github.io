@@ -1,11 +1,11 @@
 ---
-order: 1
 title: "Mistahub"
 description: "mistahuman hub for applications"
 liveUrl: "https://mistahuman.github.io/mistahub/"
 githubUrl: "https://github.com/mistahuman/mistahub"
 tech: ["Astro", "Svelte", "Skeleton UI"]
-date: "2026"
+date: "2026-04"
+category: "app"
 status: "completed"
 featured: true
 lifecycle: "live"

@@ -1,11 +1,11 @@
 ---
-order: 2
 title: "Mistatools"
 description: "mistahuman tools"
 liveUrl: "https://mistahuman.github.io/mistatools/"
 githubUrl: "https://github.com/mistahuman/mistatools"
 tech: ["SvelteKit", "Skeleton UI"]
-date: "2026"
+date: "2026-05"
+category: "app"
 status: "completed"
 featured: true
 lifecycle: "live"

@@ -1,11 +1,11 @@
 ---
-order: 4
 title: "Landing page – Andrea Faccani"
 description: "modern landing page with a clean design"
 liveUrl: "https://www.andreafaccani-fisioterapista.it/"
 githubUrl: "https://github.com/mistahuman/landpage-andreafaccani"
 tech: ["Astro", "Svelte", "Skeleton UI"]
-date: "2025"
+date: "2025-03"
+category: "app"
 status: "completed"
 featured: false
 lifecycle: "live"

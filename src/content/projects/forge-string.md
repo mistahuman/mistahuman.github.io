@@ -1,11 +1,11 @@
 ---
-order: 5
 title: "Forge String"
 description: "paste a pile of tokens, pick a separator, get one clean string"
 liveUrl: "https://mistahuman.github.io/forge-string/"
 githubUrl: "https://github.com/mistahuman/forge-string"
 tech: ["SvelteKit", "Svelte", "Skeleton UI", "TypeScript"]
-date: "2026"
+date: "2026-06"
+category: "app"
 status: "completed"
 featured: true
 lifecycle: "live"

@@ -3,14 +3,16 @@
 import { getCollection } from 'astro:content';
 import { Github } from '@lucide/svelte';
 import ProjectCard from '@components/generic/ProjectCard.astro';
+import { byDateThenTitle, categoryMeta, displayDate, type ProjectCategory } from '../data/projects';
 
-const projects = (await getCollection('projects'))
-  .map((entry) => entry.data)
-  .sort((a, b) => a.order - b.order);
+const projects = (await getCollection('projects')).map((entry) => entry.data).sort(byDateThenTitle);
 
-const webProjects = projects.filter((p) => !p.category || p.category === 'web');
-const templateProjects = projects.filter((p) => p.category === 'template');
-const academicProjects = projects.filter((p) => p.category === 'academic');
+const inCategory = (category: ProjectCategory) => projects.filter((p) => p.category === category);
+
+const appProjects = inCategory('app');
+const cliProjects = inCategory('cli');
+const starterProjects = inCategory('starter');
+const academicProjects = inCategory('academic');
 ---
 
 <div class="container mx-auto space-y-16">
@@ -19,37 +21,40 @@ const academicProjects = projects.filter((p) => p.category === 'academic');
     <p class="text-surface-600-400">a collection of my recent works</p>
   </header>
 
-  <!-- App / web projects — the showcase tier -->
+  <!-- App / web projects — the showcase tier, so it carries no heading -->
   <section class="space-y-6">
-    <!-- <div class="text-center space-y-1">
-      <h2 class="h3"><span class="text-primary-500">//</span> apps</h2>
-      <p class="text-sm text-surface-600-400">web apps and tools I've built</p>
-    </div> -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {webProjects.map((project) => <ProjectCard project={project} variant="app" />)}
+      {appProjects.map((project) => <ProjectCard project={project} variant="app" />)}
     </div>
   </section>
 
-  <!-- Templates — compact tier -->
+  <!-- Command-line tools -->
   <section class="space-y-6">
     <div class="text-center space-y-2">
-      <h2 class="h3"><span class="text-primary-500">//</span> templates</h2>
-      <p class="text-sm text-surface-600-400">
-        reusable my starters for frontend, backend and fullstack projects
-      </p>
+      <h2 class="h3"><span class="text-primary-500">//</span> {categoryMeta.cli.label}</h2>
+      <p class="text-sm text-surface-600-400">{categoryMeta.cli.blurb}</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      {cliProjects.map((project) => <ProjectCard project={project} variant="app" />)}
+    </div>
+  </section>
+
+  <!-- Starters — compact tier -->
+  <section class="space-y-6">
+    <div class="text-center space-y-2">
+      <h2 class="h3"><span class="text-primary-500">//</span> {categoryMeta.starter.label}</h2>
+      <p class="text-sm text-surface-600-400">{categoryMeta.starter.blurb}</p>
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {templateProjects.map((project) => <ProjectCard project={project} variant="compact" />)}
+      {starterProjects.map((project) => <ProjectCard project={project} variant="compact" />)}
     </div>
   </section>
 
   <!-- Academic / research repos — sober centered list -->
   <section class="space-y-4">
     <div class="text-center space-y-2">
-      <h2 class="h3"><span class="text-primary-500">//</span> academic & research</h2>
-      <p class="text-sm text-surface-600-400">
-        repos from my Master's in Nuclear and Energy Engineering at UniBO
-      </p>
+      <h2 class="h3"><span class="text-primary-500">//</span> {categoryMeta.academic.label}</h2>
+      <p class="text-sm text-surface-600-400">{categoryMeta.academic.blurb}</p>
     </div>
     <div class="space-y-2 max-w-2xl mx-auto">
       {
@@ -60,7 +65,7 @@ const academicProjects = projects.filter((p) => p.category === 'academic');
               <p class="text-xs text-surface-600-400 mt-0.5">{project.description}</p>
             </div>
             <div class="flex items-center gap-3 shrink-0">
-              <span class="text-xs text-surface-600-400">{project.date}</span>
+              <span class="text-xs text-surface-600-400">{displayDate(project)}</span>
               <a
                 href={project.githubUrl}
                 target="_blank"

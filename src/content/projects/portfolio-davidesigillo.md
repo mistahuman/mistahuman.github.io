@@ -1,11 +1,11 @@
 ---
-order: 3
 title: "Portfolio – Davide Sigillo"
 description: "personal portfolio with a minimalist design"
 liveUrl: "https://mistahuman.github.io/portfolio-davidesigillo/"
 githubUrl: "https://github.com/mistahuman/portfolio-davidesigillo"
 tech: ["Astro", "TailwindCSS"]
 date: "2025"
+category: "app"
 status: "completed"
 featured: false
 lifecycle: "live"
