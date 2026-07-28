@@ -1,0 +1,33 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '@layouts/Layout.astro';
+import BlogList from '@components/generic/BlogList.astro';
+import { byDateDesc, collectTags, isPublished } from '../../data/blog';
+
+const posts = (await getCollection('blog')).filter(isPublished).sort(byDateDesc);
+const tags = collectTags(posts);
+---
+
+<Layout title="blog" description="notes, tinkering and the occasional write-up">
+  <section class="container mx-auto px-6 py-16 md:py-20 max-w-3xl">
+    <header class="space-y-3 mb-12">
+      <h1 class="h1">Blog</h1>
+      <p class="text-surface-600-400">notes, tinkering and the occasional write-up</p>
+
+      {
+        tags.length > 0 && (
+          <ul class="flex flex-wrap gap-1.5 pt-2">
+            {tags.map((tag) => (
+              <li class="chip preset-outlined-primary-500" style="--chip-size: var(--text-xs)">
+                {tag.tag}
+                <span class="opacity-60">{tag.count}</span>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <BlogList posts={posts} />
+  </section>
+</Layout>

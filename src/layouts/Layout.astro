@@ -3,9 +3,14 @@ import LayoutRoot from '@layouts/LayoutRoot.astro';
 import Header from '@components/generic/Header.astro';
 import Footer from '@components/generic/Footer.astro';
 import DestroyMode from '@components/DestroyMode.svelte';
+import type { SeoProps } from '@config';
+
+// Chrome (header, footer) plus the SEO passthrough: pages set their metadata here
+// and LayoutRoot turns it into <head>. Omitting a field falls back to the site default.
+const seo = Astro.props as SeoProps;
 ---
 
-<LayoutRoot>
+<LayoutRoot {...seo}>
   <div class="grid h-screen grid-rows-[auto_1fr_auto] max-w-full">
     <Header />
     <main class="bg-surface-50-950">

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mistahuman.github.io/sitemap-index.xml

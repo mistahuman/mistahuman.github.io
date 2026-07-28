@@ -1,0 +1,204 @@
+---
+import { getCollection, render } from 'astro:content';
+import { ChevronLeft, Calendar, Clock } from '@lucide/svelte';
+import Layout from '@layouts/Layout.astro';
+import { displayDate, isPublished, readingTime, type Post } from '../../data/blog';
+
+// One page per published post. The slug is the file-derived collection id.
+export async function getStaticPaths() {
+  const posts = (await getCollection('blog')).filter(isPublished);
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+interface Props {
+  post: Post;
+}
+
+const { post } = Astro.props;
+const { title, description, date, tags, cover, coverAlt } = post.data;
+const { Content } = await render(post);
+---
+
+<Layout
+  title={title}
+  description={description}
+  image={cover}
+  imageAlt={cover ? (coverAlt ?? title) : undefined}
+  type="article"
+  publishedDate={date}
+  tags={tags}
+>
+  <article class="container mx-auto px-6 py-12 md:py-16 max-w-3xl">
+    <a
+      href="/blog"
+      class="inline-flex items-center gap-1 text-sm text-surface-600-400 hover:text-primary-500 mb-8"
+    >
+      <ChevronLeft class="w-4 h-4" />
+      back to blog
+    </a>
+
+    <header class="space-y-4 mb-8">
+      <h1 class="h1">{title}</h1>
+      <p class="text-surface-600-400">{description}</p>
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="text-xs text-surface-600-400 flex items-center gap-1">
+          <Calendar class="w-3 h-3" />
+          {displayDate(date)}
+        </span>
+        <span class="text-xs text-surface-600-400 flex items-center gap-1">
+          <Clock class="w-3 h-3" />
+          {readingTime(post)} min read
+        </span>
+        {
+          tags.map((tag) => (
+            <span class="chip preset-outlined-primary-500" style="--chip-size: var(--text-xs)">
+              {tag}
+            </span>
+          ))
+        }
+      </div>
+    </header>
+
+    {
+      /* Height-capped rather than width-filled, so a portrait photo doesn't take
+         over the page while a landscape one still spans the column. */
+      cover && (
+        <img
+          src={cover}
+          alt={coverAlt ?? title}
+          class="mx-auto block max-h-[32rem] w-auto max-w-full rounded-container border border-surface-200-800 mb-10"
+        />
+      )
+    }
+
+    <div class="post-body">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  /* The rendered markdown is injected unscoped, so target it through the scoped
+     wrapper with :global(). Body font/colour are inherited from the active theme;
+     these rules only handle rhythm, headings, links, code and media. */
+  .post-body {
+    line-height: 1.7;
+  }
+
+  .post-body :global(> * + *) {
+    margin-top: 1.15em;
+  }
+
+  .post-body :global(h2) {
+    font-family: var(--typo-heading--font-family);
+    font-weight: var(--typo-heading--font-weight, bold);
+    letter-spacing: var(--typo-heading--letter-spacing, -0.02em);
+    font-size: 1.6rem;
+    line-height: 1.25;
+    margin-top: 2.2em;
+    margin-bottom: 0.2em;
+  }
+
+  .post-body :global(h3) {
+    font-family: var(--typo-heading--font-family);
+    font-weight: var(--typo-heading--font-weight, bold);
+    font-size: 1.25rem;
+    line-height: 1.3;
+    margin-top: 1.8em;
+    margin-bottom: 0.2em;
+  }
+
+  .post-body :global(a) {
+    color: var(--color-primary-500);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .post-body :global(ul),
+  .post-body :global(ol) {
+    padding-left: 1.4em;
+  }
+
+  .post-body :global(ul) {
+    list-style: disc;
+  }
+
+  .post-body :global(ol) {
+    list-style: decimal;
+  }
+
+  .post-body :global(li + li) {
+    margin-top: 0.4em;
+  }
+
+  .post-body :global(li::marker) {
+    color: var(--color-primary-500);
+  }
+
+  .post-body :global(strong) {
+    font-weight: 700;
+  }
+
+  .post-body :global(code) {
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
+    font-size: 0.9em;
+    padding: 0.1em 0.35em;
+    border-radius: var(--radius-base, 0.25rem);
+    background: color-mix(in oklab, var(--color-primary-500) 12%, transparent);
+  }
+
+  .post-body :global(pre) {
+    padding: 1em 1.15em;
+    border-radius: var(--radius-container, 0.5rem);
+    overflow-x: auto;
+    border: 1px solid color-mix(in oklab, currentColor 15%, transparent);
+  }
+
+  .post-body :global(pre code) {
+    background: transparent;
+    padding: 0;
+  }
+
+  .post-body :global(blockquote) {
+    border-left: 3px solid var(--color-primary-500);
+    padding-left: 1em;
+    font-style: italic;
+    opacity: 0.85;
+  }
+
+  .post-body :global(hr) {
+    border: 0;
+    border-top: 1px solid color-mix(in oklab, currentColor 20%, transparent);
+    margin: 2.4em 0;
+  }
+
+  /* `display: block` + `width: max-content` is what lets a wide table scroll on its
+     own instead of forcing the whole page sideways on a phone. */
+  .post-body :global(table) {
+    display: block;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.92em;
+  }
+
+  .post-body :global(th),
+  .post-body :global(td) {
+    padding: 0.5em 0.9em;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid color-mix(in oklab, currentColor 18%, transparent);
+  }
+
+  .post-body :global(thead th) {
+    background: color-mix(in oklab, var(--color-primary-500) 10%, transparent);
+    font-weight: 700;
+  }
+
+  .post-body :global(img) {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--radius-container, 0.5rem);
+  }
+</style>

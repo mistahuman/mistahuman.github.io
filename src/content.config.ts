@@ -27,4 +27,24 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { projects };
+// One markdown file per post in src/content/blog/. Frontmatter carries the metadata
+// (validated below); the markdown body is the article itself and gets rendered.
+//
+// Posts are sorted by `date` descending. `draft: true` keeps a post out of the
+// listing and off its own route in production builds.
+const blog = defineCollection({
+  loader: glob({ base: './src/content/blog', pattern: '**/*.md' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(), // short blurb shown on the card and in meta tags
+    // Publish date as `YYYY-MM-DD`. Zero-padded, so plain string comparison is chronological.
+    date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    tags: z.array(z.string()).default([]),
+    // Optional hero image, as a path under /public (e.g. `/blog/couch-setup.jpg`).
+    cover: z.string().optional(),
+    coverAlt: z.string().optional(),
+    draft: z.boolean().default(false),
+  }),
+});
+
+export const collections = { projects, blog };
